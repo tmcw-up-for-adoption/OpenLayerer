@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>OpenLayerer</title>
+    <style type="text/css">
+      body {
+        font-family: "Arial", sans-serif;
+        font-size: small;
+        color: #333;
+      }
+      fieldset {
+        width: 200px;
+        float: left;
+        border: 0;
+      }
+      legend {
+        font-weight: bold;
+      }
+      #footer {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OpenLayerer</h1>
+    <p>OpenLayerer makes custom versions of OpenLayers which include only the parts that you want to use</p>
+    <form action="/openlayerer" method="POST">
+      <fieldset>
+        <legend>Layer Types</legend>
+        {% for layer in layers %}
+        <div>
+          <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
+          <label for="{{ layer }}">{{ layer }}</label>
+        </div>
+        {% endfor %}
+      </fieldset>
+
+      <fieldset>
+        <legend>Controls</legend>
+        {% for control in controls %}
+        <div>
+          <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
+          <label for="{{ control }}">{{ control }}</label>
+        </div>
+        {% endfor %}
+      </fieldset>
+      <fieldset>
+        <legend>Languages</legend>
+        {% for language in languages %}
+        <div>
+          <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
+          <label for="{{ language }}">{{ language }}</label>
+        </div>
+        {% endfor %}
+      </fieldset>
+      <input type="submit" value="Do It" />
+    </form>
+    <div id="footer">
+    <small>2009 - Development Seed. Send feedback to macwright@gmail.com</small>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/!svn/ver/9170/trunk/openlayers/tools
+END
+exampleparser.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/9038/trunk/openlayers/tools/exampleparser.py
+END
+toposort.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/2978/trunk/openlayers/tools/toposort.py
+END
+jsmin.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/1424/trunk/openlayers/tools/jsmin.c
+END
+mergejs.py
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/9170/trunk/openlayers/tools/mergejs.py
+END
+shrinksafe.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/8943/trunk/openlayers/tools/shrinksafe.py
+END
+jsmin.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/2978/trunk/openlayers/tools/jsmin.py
+END
+update_dev_dir.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/8724/trunk/openlayers/tools/update_dev_dir.sh
+END
+minimize.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/5635/trunk/openlayers/tools/minimize.py
+END
+oldot.py
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/7458/trunk/openlayers/tools/oldot.py
+END
+release.sh
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/4928/trunk/openlayers/tools/release.sh
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/1424/trunk/openlayers/tools/README.txt
+END
+BeautifulSoup.py
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/5362/trunk/openlayers/tools/BeautifulSoup.py
+END

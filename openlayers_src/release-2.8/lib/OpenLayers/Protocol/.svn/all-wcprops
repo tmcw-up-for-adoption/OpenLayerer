@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Protocol
+END
+HTTP.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Protocol/HTTP.js
+END
+SQL.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Protocol/SQL.js
+END
+WFS.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Protocol/WFS.js
+END

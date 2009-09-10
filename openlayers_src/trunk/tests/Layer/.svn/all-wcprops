@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/9618/trunk/openlayers/tests/Layer
+END
+Google.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/6724/trunk/openlayers/tests/Layer/Google.html
+END
+georss.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/9038/trunk/openlayers/tests/Layer/georss.txt
+END
+ArcIMS.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/9249/trunk/openlayers/tests/Layer/ArcIMS.html
+END
+Yahoo.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/6724/trunk/openlayers/tests/Layer/Yahoo.html
+END
+GML.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/6724/trunk/openlayers/tests/Layer/GML.html
+END
+owls.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/6712/trunk/openlayers/tests/Layer/owls.xml
+END
+TileCache.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/9402/trunk/openlayers/tests/Layer/TileCache.html
+END
+ArcGIS93Rest.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/8918/trunk/openlayers/tests/Layer/ArcGIS93Rest.html
+END
+Image.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/8923/trunk/openlayers/tests/Layer/Image.html
+END
+Text.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/7865/trunk/openlayers/tests/Layer/Text.html
+END
+EventPane.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/8573/trunk/openlayers/tests/Layer/EventPane.html
+END
+Grid.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/7620/trunk/openlayers/tests/Layer/Grid.html
+END
+KaMap.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/6724/trunk/openlayers/tests/Layer/KaMap.html
+END
+XYZ.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/9247/trunk/openlayers/tests/Layer/XYZ.html
+END
+MapGuide.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9006/trunk/openlayers/tests/Layer/MapGuide.html
+END
+Vector.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/9265/trunk/openlayers/tests/Layer/Vector.html
+END
+GeoRSS.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/7387/trunk/openlayers/tests/Layer/GeoRSS.html
+END
+TMS.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/9403/trunk/openlayers/tests/Layer/TMS.html
+END
+MapServer.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/6724/trunk/openlayers/tests/Layer/MapServer.html
+END
+SphericalMercator.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/9022/trunk/openlayers/tests/Layer/SphericalMercator.html
+END
+data_Layer_Text_textfile_2.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/6712/trunk/openlayers/tests/Layer/data_Layer_Text_textfile_2.txt
+END
+data_Layer_Text_textfile_overflow.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/6712/trunk/openlayers/tests/Layer/data_Layer_Text_textfile_overflow.txt
+END
+PointTrack.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/6724/trunk/openlayers/tests/Layer/PointTrack.html
+END
+WrapDateLine.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/6719/trunk/openlayers/tests/Layer/WrapDateLine.html
+END
+FixedZoomLevels.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/6724/trunk/openlayers/tests/Layer/FixedZoomLevels.html
+END
+data_Layer_Text_textfile.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/6712/trunk/openlayers/tests/Layer/data_Layer_Text_textfile.txt
+END
+atom-1.0.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/6712/trunk/openlayers/tests/Layer/atom-1.0.xml
+END
+HTTPRequest.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/9618/trunk/openlayers/tests/Layer/HTTPRequest.html
+END
+MultiMap.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/6724/trunk/openlayers/tests/Layer/MultiMap.html
+END
+WFS.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/8952/trunk/openlayers/tests/Layer/WFS.html
+END
+Markers.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/9233/trunk/openlayers/tests/Layer/Markers.html
+END
+WMS.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/9029/trunk/openlayers/tests/Layer/WMS.html
+END
+mice.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/6712/trunk/openlayers/tests/Layer/mice.xml
+END

@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/9474/trunk/openlayers/tests/manual
+END
+vector-features-performance.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/7930/trunk/openlayers/tests/manual/vector-features-performance.html
+END
+overviewmap-projection.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/7864/trunk/openlayers/tests/manual/overviewmap-projection.html
+END
+ve-opacity.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/6131/trunk/openlayers/tests/manual/ve-opacity.html
+END
+renderedDimensions.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/8906/trunk/openlayers/tests/manual/renderedDimensions.html
+END
+tween.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/6673/trunk/openlayers/tests/manual/tween.html
+END
+ajax.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/7335/trunk/openlayers/tests/manual/ajax.html
+END
+draw-feature.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/6131/trunk/openlayers/tests/manual/draw-feature.html
+END
+tiles-loading.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/6131/trunk/openlayers/tests/manual/tiles-loading.html
+END
+pan-redraw-svg.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/7930/trunk/openlayers/tests/manual/pan-redraw-svg.html
+END
+rendered-dimensions.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9384/trunk/openlayers/tests/manual/rendered-dimensions.html
+END
+reflow.html
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/7578/trunk/openlayers/tests/manual/reflow.html
+END
+ajax.txt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/5535/trunk/openlayers/tests/manual/ajax.txt
+END
+clip-features-svg.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/7930/trunk/openlayers/tests/manual/clip-features-svg.html
+END
+big-georss.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/7871/trunk/openlayers/tests/manual/big-georss.html
+END
+google-panning.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/6470/trunk/openlayers/tests/manual/google-panning.html
+END
+geojson-geomcoll-reprojection.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/9181/trunk/openlayers/tests/manual/geojson-geomcoll-reprojection.html
+END
+feature-handler.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/6131/trunk/openlayers/tests/manual/feature-handler.html
+END
+arkansas.rss
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/7871/trunk/openlayers/tests/manual/arkansas.rss
+END
+arcims-2117.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/9474/trunk/openlayers/tests/manual/arcims-2117.html
+END
+select-feature.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/7159/trunk/openlayers/tests/manual/select-feature.html
+END
+popup-keepInMap.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/9092/trunk/openlayers/tests/manual/popup-keepInMap.html
+END
+vector-layer-zindex.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/7879/trunk/openlayers/tests/manual/vector-layer-zindex.html
+END

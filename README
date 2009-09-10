@@ -1,0 +1,9 @@
+OpenLayerer:
+
+The bleeding-edge source to http://openlayerer.appspot.com/
+
+Includes:
+
+* Refactored tools to bundle OpenLayers
+* OpenLayers code for trunk and 2.8
+* Simple App Engine front end

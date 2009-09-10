@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/9493/tags/openlayers/release-2.8/build
+END
+full.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9493/tags/openlayers/release-2.8/build/full.cfg
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/9493/tags/openlayers/release-2.8/build/license.txt
+END
+library.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/9493/tags/openlayers/release-2.8/build/library.cfg
+END
+build.py
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9493/tags/openlayers/release-2.8/build/build.py
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/9493/tags/openlayers/release-2.8/build/README.txt
+END
+lite.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/9493/tags/openlayers/release-2.8/build/lite.cfg
+END
+buildUncompressed.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/9493/tags/openlayers/release-2.8/build/buildUncompressed.py
+END

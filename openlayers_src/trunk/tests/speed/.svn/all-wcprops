@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/8957/trunk/openlayers/tests/speed
+END
+string_format.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/8957/trunk/openlayers/tests/speed/string_format.html
+END
+wmc_speed.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/7624/trunk/openlayers/tests/speed/wmc_speed.html
+END
+geometry.html
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/7625/trunk/openlayers/tests/speed/geometry.html
+END

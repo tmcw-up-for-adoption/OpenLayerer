@@ -1,0 +1,4 @@
+This should be fairly self-explanatory. Trunk should be tracking trunk.
+If this repository were in svn, it would be an svn:external.
+
+release-2.8 is a checkout of the release-2.8 branch.

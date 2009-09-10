@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/9493/tags/openlayers/release-2.8/tests/selenium/remotecontrol
+END
+test_ol.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/tests/selenium/remotecontrol/test_ol.py
+END
+config.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/tests/selenium/remotecontrol/config.cfg
+END
+selenium.py
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/9493/tags/openlayers/release-2.8/tests/selenium/remotecontrol/selenium.py
+END
+setup.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/9493/tags/openlayers/release-2.8/tests/selenium/remotecontrol/setup.txt
+END

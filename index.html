@@ -1,63 +1,86 @@
 <html>
   <head>
     <title>OpenLayerer</title>
+    <link type="text/css" rel="stylesheet" media="all" href="style/grid.css" />
     <style type="text/css">
       body {
         font-family: "Arial", sans-serif;
         font-size: small;
         color: #333;
       }
+      a {
+        text-decoration: none;
+      }
+      small,
+      small a {
+        color: #ddd;
+        font-size: 7px;
+      }
+      small a:hover {
+        color: blue;
+      }
       fieldset {
-        width: 200px;
-        float: left;
+        padding: 0;
         border: 0;
       }
       legend {
         font-weight: bold;
       }
-      #footer {
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
+      .header {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #aaa;
+      }
+      .footer {
+        padding-top: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>OpenLayerer</h1>
-    <p>OpenLayerer makes custom versions of OpenLayers which include only the parts that you want to use</p>
-    <form action="/openlayerer" method="POST">
-      <fieldset>
-        <legend>Layer Types</legend>
-        {% for layer in layers %}
-        <div>
-          <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
-          <label for="{{ layer }}">{{ layer }}</label>
+    <div class="container_12">
+      <div class="header clearfix">
+        <div class="grid_4">
+          <h1>OpenLayerer</h1>
         </div>
-        {% endfor %}
-      </fieldset>
+        <div class="grid_8">
+        <p>OpenLayerer makes custom versions of <a href="http://www.openlayers.org">OpenLayers</a> which include only the parts that you want to use. You can <a href="http://github.com/tmcw/OpenLayerer/tree">fork this project on GitHub.</a></p>
+        </div>
+      </div>
+      <form action="/openlayerer" method="POST">
+        <fieldset class="grid_4">
+          <legend>Layer Types</legend>
+          {% for layer in layers %}
+          <div>
+            <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
+            <label for="{{ layer }}">{{ layer }}</label>
+            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Layer/{{ layer }}-js.html">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
 
-      <fieldset>
-        <legend>Controls</legend>
-        {% for control in controls %}
-        <div>
-          <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
-          <label for="{{ control }}">{{ control }}</label>
-        </div>
-        {% endfor %}
-      </fieldset>
-      <fieldset>
-        <legend>Languages</legend>
-        {% for language in languages %}
-        <div>
-          <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
-          <label for="{{ language }}">{{ language }}</label>
-        </div>
-        {% endfor %}
-      </fieldset>
-      <input type="submit" value="Do It" />
-    </form>
-    <div id="footer">
-    <small>2009 - Development Seed. Send feedback to macwright@gmail.com</small>
-  </div>
-  </body>
+        <fieldset class="grid_4">
+          <legend>Controls</legend>
+          {% for control in controls %}
+          <div>
+            <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
+            <label for="{{ control }}">{{ control }}</label>
+            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Control/{{ control }}-js.html">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
+        <fieldset class="grid_4">
+          <legend>Languages</legend>
+          {% for language in languages %}
+          <div>
+            <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
+            <label for="{{ language }}">{{ language }}</label>
+          </div>
+          {% endfor %}
+        </fieldset>
+        <input type="submit" value="Do It" /> (generate OpenLayers.js)
+      </form>
+      <div class="footer" class="grid_12">
+        2009 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com
+      </div>
+    </div>
 </html>

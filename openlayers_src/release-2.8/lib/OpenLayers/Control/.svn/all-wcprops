@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control
+END
+OverviewMap.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/OverviewMap.js
+END
+ZoomPanel.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ZoomPanel.js
+END
+EditingToolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/EditingToolbar.js
+END
+NavToolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/NavToolbar.js
+END
+MouseToolbar.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/MouseToolbar.js
+END
+DragPan.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/DragPan.js
+END
+Snapping.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Snapping.js
+END
+MouseDefaults.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/MouseDefaults.js
+END
+Permalink.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Permalink.js
+END
+PanZoom.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/PanZoom.js
+END
+LayerSwitcher.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/LayerSwitcher.js
+END
+ArgParser.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ArgParser.js
+END
+Scale.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Scale.js
+END
+KeyboardDefaults.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/KeyboardDefaults.js
+END
+DragFeature.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/DragFeature.js
+END
+SelectFeature.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/SelectFeature.js
+END
+WMSGetFeatureInfo.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/WMSGetFeatureInfo.js
+END
+ScaleLine.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ScaleLine.js
+END
+Navigation.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Navigation.js
+END
+Measure.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Measure.js
+END
+Attribution.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Attribution.js
+END
+PanZoomBar.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/PanZoomBar.js
+END
+DrawFeature.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/DrawFeature.js
+END
+Button.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Button.js
+END
+ZoomIn.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ZoomIn.js
+END
+ZoomOut.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ZoomOut.js
+END
+MousePosition.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/MousePosition.js
+END
+Pan.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Pan.js
+END
+NavigationHistory.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/NavigationHistory.js
+END
+ZoomToMaxExtent.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ZoomToMaxExtent.js
+END
+Split.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Split.js
+END
+GetFeature.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/GetFeature.js
+END
+ZoomBox.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ZoomBox.js
+END
+PanPanel.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/PanPanel.js
+END
+Panel.js
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/Panel.js
+END
+ModifyFeature.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/9493/tags/openlayers/release-2.8/lib/OpenLayers/Control/ModifyFeature.js
+END

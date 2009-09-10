@@ -211,10 +211,10 @@ def merge (sourceDirectory, config = None):
     return "".join(result)
 
 if __name__ == "__main__":
-    from optionparser import OptionParser
+    from optparse import OptionParser
 
     usage = "usage: mergejs.py <output.js> <source directory> [--config config filename]"
-    parser = OptionParser()
+    parser = OptionParser(usage=usage)
     parser.add_option('-c', '--config', dest="config_filename", action="store",
         help="Config file name")
     (options, args) = parser.parse_args()

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #
 # Merge multiple JavaScript source code files into one.
 #
@@ -36,13 +37,11 @@
 # TODO: Allow files to be excluded. e.g. `Crossbrowser/DebugMode.js`?
 # TODO: Report error when dependency can not be found rather than KeyError.
 
-import re
-import os
-import sys
+import re, os, sys
 
 SUFFIX_JAVASCRIPT = ".js"
-
 RE_REQUIRE = "@requires:? (.*)\n" # TODO: Ensure in comment?
+
 class SourceFile:
     """
     Represents a Javascript source code file.
@@ -66,15 +65,6 @@ class SourceFile:
         return re.findall(RE_REQUIRE, self.source)
 
     requires = property(fget=_getRequirements, doc="")
-
-
-
-def usage(filename):
-    """
-    Displays a usage message.
-    """
-    print "%s [-c <config file>] <output.js> <directory> [...]" % filename
-
 
 class Config:
     """
@@ -106,23 +96,34 @@ class Config:
     Any text appearing after a # symbol indicates a comment.
     
     """
+    
+    def __init__(self, **kwargs):
+        self.forceFirst = kwargs.get('forceFirst', [])
+        self.forceLast = kwargs.get('forceLast', [])
+        self.include = kwargs.get('include', [])
+        self.exclude = kwargs.get('exclude', [])
 
-    def __init__(self, filename = None):
+    def read(self, filename):
         """
         Parses the content of the named file and stores the values.
         """
-        if filename:
-          lines = [re.sub("#.*?$", "", line).strip() # Assumes end-of-line character is present
-                   for line in open(filename)
-                   if line.strip() and not line.strip().startswith("#")] # Skip blank lines and comments
+        lines = [re.sub("#.*?$", "", line).strip() # Assumes end-of-line character is present
+                 for line in open(filename)
+                 if line.strip() and not line.strip().startswith("#")] # Skip blank lines and comments
 
-          self.forceFirst = lines[lines.index("[first]") + 1:lines.index("[last]")]
+        self.forceFirst = lines[lines.index("[first]") + 1:lines.index("[last]")]
 
-          self.forceLast = lines[lines.index("[last]") + 1:lines.index("[include]")]
-          self.include =  lines[lines.index("[include]") + 1:lines.index("[exclude]")]
-          self.exclude =  lines[lines.index("[exclude]") + 1:]
+        self.forceLast = lines[lines.index("[last]") + 1:lines.index("[include]")]
+        self.include =  lines[lines.index("[include]") + 1:lines.index("[exclude]")]
+        self.exclude =  lines[lines.index("[exclude]") + 1:]
 
-def run (sourceDirectory, outputFilename = None, cfg = None):
+
+def merge (sourceDirectory, config = None):
+    """ Merges source files within a given directory according to a configuration
+    :param sourceDirectory: a string designating the path of the OpenLayers source
+    :param config: a mergejs.Config object
+    """
+
     allFiles = []
 
     ## Find all the Javascript source files
@@ -131,10 +132,10 @@ def run (sourceDirectory, outputFilename = None, cfg = None):
             if filename.endswith(SUFFIX_JAVASCRIPT) and not filename.startswith("."):
                 filepath = os.path.join(root, filename)[len(sourceDirectory)+1:]
                 filepath = filepath.replace("\\", "/")
-                if cfg and cfg.include:
-                    if filepath in cfg.include or filepath in cfg.forceFirst:
+                if config and config.include:
+                    if filepath in config.include or filepath in config.forceFirst:
                         allFiles.append(filepath)
-                elif (not cfg) or (filepath not in cfg.exclude):
+                elif (not config) or (filepath not in config.exclude):
                     allFiles.append(filepath)
 
     ## Header inserted at the start of each file in the output
@@ -147,6 +148,7 @@ def run (sourceDirectory, outputFilename = None, cfg = None):
     ## Import file source code
     ## TODO: Do import when we walk the directories above?
     for filepath in allFiles:
+        print "Importing: %s" % filepath
         fullpath = os.path.join(sourceDirectory, filepath).strip()
         content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
         files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
@@ -162,6 +164,7 @@ def run (sourceDirectory, outputFilename = None, cfg = None):
         nodes = []
         routes = []
         ## Resolve the dependencies
+        print "Resolution pass %s... " % resolution_pass
         resolution_pass += 1 
 
         for filepath, info in files.items():
@@ -173,6 +176,7 @@ def run (sourceDirectory, outputFilename = None, cfg = None):
             for filepath in dependencyLevel:
                 order.append(filepath)
                 if not files.has_key(filepath):
+                    print "Importing: %s" % filepath
                     fullpath = os.path.join(sourceDirectory, filepath).strip()
                     content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
                     files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
@@ -188,50 +192,51 @@ def run (sourceDirectory, outputFilename = None, cfg = None):
                     complete = False
         except:
             complete = False
-        
-
 
     ## Move forced first and last files to the required position
-    if cfg:
-        order = cfg.forceFirst + [item
+    if config:
+        print "Re-ordering files..."
+        order = config.forceFirst + [item
                      for item in order
-                     if ((item not in cfg.forceFirst) and
-                         (item not in cfg.forceLast))] + cfg.forceLast
+                     if ((item not in config.forceFirst) and
+                         (item not in config.forceLast))] + config.forceLast
     
     ## Output the files in the determined order
     result = []
 
     for fp in order:
         f = files[fp]
+        print "Exporting: ", f.filepath
         result.append(HEADER % f.filepath)
         source = f.source
         result.append(source)
         if not source.endswith("\n"):
             result.append("\n")
 
-
-    if outputFilename:
-        open(outputFilename, "w").write("".join(result))
+    print "\nTotal files merged: %d " % len(files)
     return "".join(result)
 
 if __name__ == "__main__":
-    import getopt
+    from optionparser import OptionParser
 
-    options, args = getopt.getopt(sys.argv[1:], "-c:")
+    usage = "usage: mergejs.py <output.js> <source directory> [--config config filename]"
+    parser = OptionParser()
+    parser.add_option('-c', '--config', dest="config_filename", action="store",
+        help="Config file name")
+    (options, args) = parser.parse_args()
     
     try:
-        outputFilename = args[0]
+        outputFilename = sys.argv[0]
+        sourceDirectory = sys.argv[1]
     except IndexError:
-        usage(sys.argv[0])
-        raise SystemExit
+        parser.print_help()
+        sys.exit()
+
+    if options.config_filename:
+        config = Config()
+        config.read(options.config_filename)
     else:
-        sourceDirectory = args[1]
-        if not sourceDirectory:
-            usage(sys.argv[0])
-            raise SystemExit
+        config = None
 
-    configFile = None
-    if options and options[0][0] == "-c":
-        configFile = options[0][1]
-
-    run( sourceDirectory, outputFilename, configFile )
+    output = merge(sourceDirectory, config)
+    file(outputFilename, "w").write(output)

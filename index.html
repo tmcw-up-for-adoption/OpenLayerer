@@ -5,7 +5,7 @@
     <style type="text/css">
       body {
         font-family: "Arial", sans-serif;
-        font-size: small;
+        font-size: 13px;
         color: #333;
       }
       a {
@@ -25,6 +25,7 @@
       }
       legend {
         font-weight: bold;
+        margin-bottom: 1em;
       }
       .header {
         padding-bottom: 10px;
@@ -47,18 +48,28 @@
         </div>
       </div>
       <form action="/openlayerer" method="POST">
-        <fieldset class="grid_4">
-          <legend>Layer Types</legend>
-          {% for layer in layers %}
-          <div>
-            <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
-            <label for="{{ layer }}">{{ layer }}</label>
-            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Layer/{{ layer }}-js.html">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
+        <div class="grid_3">
+          <select name="openlayers_version">
+            <option value="28">OpenLayers 2.8</option>
+            <option value="trunk">OpenLayers dev</option>
+          </select>
+          <br />
+          <input checked type="checkbox" value="compress">Compress Output</input>
+          <br />
+          <br />
+          <fieldset>
+            <legend>Layer Types</legend>
+            {% for layer in layers %}
+            <div>
+              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
+              <label for="{{ layer }}">{{ layer }}</label>
+              <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Layer/{{ layer }}-js.html">docs</a>]</small>
+            </div>
+            {% endfor %}
+          </fieldset>
+        </div>
 
-        <fieldset class="grid_4">
+        <fieldset class="grid_3">
           <legend>Controls</legend>
           {% for control in controls %}
           <div>
@@ -68,12 +79,13 @@
           </div>
           {% endfor %}
         </fieldset>
-        <fieldset class="grid_4">
+        <fieldset class="grid_2">
           <legend>Languages</legend>
           {% for language in languages %}
           <div>
             <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
             <label for="{{ language }}">{{ language }}</label>
+            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Lang/{{ language }}-js.html">docs</a>]</small>
           </div>
           {% endfor %}
         </fieldset>

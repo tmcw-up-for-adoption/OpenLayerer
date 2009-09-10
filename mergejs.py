@@ -148,7 +148,6 @@ def merge (sourceDirectory, config = None):
     ## Import file source code
     ## TODO: Do import when we walk the directories above?
     for filepath in allFiles:
-        print "Importing: %s" % filepath
         fullpath = os.path.join(sourceDirectory, filepath).strip()
         content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
         files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
@@ -164,7 +163,6 @@ def merge (sourceDirectory, config = None):
         nodes = []
         routes = []
         ## Resolve the dependencies
-        print "Resolution pass %s... " % resolution_pass
         resolution_pass += 1 
 
         for filepath, info in files.items():
@@ -176,7 +174,6 @@ def merge (sourceDirectory, config = None):
             for filepath in dependencyLevel:
                 order.append(filepath)
                 if not files.has_key(filepath):
-                    print "Importing: %s" % filepath
                     fullpath = os.path.join(sourceDirectory, filepath).strip()
                     content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
                     files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
@@ -195,7 +192,6 @@ def merge (sourceDirectory, config = None):
 
     ## Move forced first and last files to the required position
     if config:
-        print "Re-ordering files..."
         order = config.forceFirst + [item
                      for item in order
                      if ((item not in config.forceFirst) and
@@ -206,14 +202,12 @@ def merge (sourceDirectory, config = None):
 
     for fp in order:
         f = files[fp]
-        print "Exporting: ", f.filepath
         result.append(HEADER % f.filepath)
         source = f.source
         result.append(source)
         if not source.endswith("\n"):
             result.append("\n")
 
-    print "\nTotal files merged: %d " % len(files)
     return "".join(result)
 
 if __name__ == "__main__":

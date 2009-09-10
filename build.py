@@ -11,15 +11,15 @@ output_filename = "OpenLayers.js"
 def minimize(text):
     try:
         import jsmin
-        print "Compressing using jsmin."
-        return license + jsmin.jsmin(text)
+        return jsmin.jsmin(text)
     except Exception, e:
         import minimize
-        print "Compressing using minimize."
-        return license + minimize.minimize(text)
+        return minimize.minimize(text)
 
 def build(config_filename, output_filename, compress = True, **kwargs):
-    merged = mergejs.run(kwargs.get('source_directory', source_directory), None, config_filename)
+    config = mergejs.Config()
+    config.read(config_filename)
+    merged = mergejs.merge(kwargs.get('source_directory', source_directory), config)
     if compress:
         try:
             output = minimize(merged)
@@ -29,7 +29,7 @@ def build(config_filename, output_filename, compress = True, **kwargs):
     else:
         output = merged
     license = file(kwargs.get('license', 'license.txt')).read() 
-    return output
+    return license + output
 
 if __name__ == "__main__":
     from optparse import OptionParser

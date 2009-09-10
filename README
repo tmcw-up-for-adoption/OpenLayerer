@@ -2,6 +2,8 @@ OpenLayerer:
 
 The bleeding-edge source to http://openlayerer.appspot.com/
 
+Note: this is the bleeding-edge source. Until this is at a cool state, it will not be stable, at all.
+
 Includes:
 
 * Refactored tools to bundle OpenLayers

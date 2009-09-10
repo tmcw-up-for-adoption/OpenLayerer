@@ -156,8 +156,10 @@ class OpenLayerer(webapp.RequestHandler):
 
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
+    version = self.request.get('version')
+
     # TODO: obviously fix this
-    merged = mergejs.merge('openlayers_src/trunk/lib', config)
+    merged = mergejs.merge('openlayers_src/%s/lib' % version, config)
 
     # TODO: allow uncompressed output
     output = build.minimize(merged)

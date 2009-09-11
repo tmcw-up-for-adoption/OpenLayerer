@@ -8,9 +8,14 @@
         font-size: 13px;
         color: #333;
         background-color: #eee;
+        margin: 0;
+        border-top: 10px solid #333;
       }
       a {
         text-decoration: none;
+      }
+      a:visited {
+        color: blue;
       }
       small,
       small a {
@@ -30,8 +35,12 @@
       }
       .header {
         padding-bottom: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         border-bottom: 1px solid #aaa;
+      }
+      h2 {
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 10px;
       }
       .footer {
         padding-top: 20px;
@@ -40,6 +49,7 @@
       .generate_button {
         font-size: 18px;
       }
+
     </style>
   </head>
   <body>
@@ -52,50 +62,92 @@
         <p>OpenLayerer makes custom versions of <a href="http://www.openlayers.org">OpenLayers</a> which include only the parts that you want to use. You can <a href="http://github.com/tmcw/OpenLayerer/tree">fork this project on GitHub.</a></p>
         </div>
       </div>
+
+      <div class="clearfix" id="version_trunk">
+        <h2>Trunk</h2>
       <form action="/openlayerer" method="POST">
         <div class="grid_3">
-          <select name="version">
-            <option value="release-2.8">OpenLayers 2.8</option>
-            <option value="trunk">OpenLayers dev</option>
-          </select>
-          <br />
-          <input checked type="checkbox" value="compress">Compress Output</input>
-          <br />
-          <br />
-          <fieldset>
+
+          <input type="hidden" name="version" value="trunk" />
+          <!-- trunk -->
+
+          <fieldset class="grid_3">
             <legend>Layer Types</legend>
-            {% for layer in layers %}
+            {% for layer in trunk.layers %}
             <div>
               <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
-              <label for="{{ layer }}">{{ layer }}</label>
-              <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Layer/{{ layer }}-js.html">docs</a>]</small>
+              <label for="{{ layer }}">{{ layer|friendly_name }}</label>
+              <small>[<a href="{{ layer|trunk_link }}">docs</a>]</small>
             </div>
             {% endfor %}
           </fieldset>
         </div>
-
         <fieldset class="grid_3">
           <legend>Controls</legend>
-          {% for control in controls %}
+          {% for control in trunk.controls %}
           <div>
             <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
-            <label for="{{ control }}">{{ control }}</label>
-            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Control/{{ control }}-js.html">docs</a>]</small>
+            <label for="{{ control }}">{{ control|friendly_name }}</label>
+            <small>[<a href=" {{ control|trunk_link }}">docs</a>]</small>
           </div>
           {% endfor %}
         </fieldset>
         <fieldset class="grid_2">
           <legend>Languages</legend>
-          {% for language in languages %}
+          {% for language in trunk.languages %}
           <div>
             <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
-            <label for="{{ language }}">{{ language }}</label>
-            <small>[<a href="http://dev.openlayers.org/releases/OpenLayers-2.8/doc/apidocs/files/OpenLayers/Lang/{{ language }}-js.html">docs</a>]</small>
+            <label for="{{ language }}">{{ language|friendly_name }}</label>
+            <small>[<a href="{{ language|trunk_link }}">docs</a>]</small>
           </div>
           {% endfor %}
         </fieldset>
         <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
       </form>
+    </div>
+
+
+
+
+
+
+      <div class="clearfix" id="version_release_28">
+        <h2>Release 2.8</h2>
+      <form action="/openlayerer" method="POST">
+        <input type="hidden" name="version" value="trunk" />
+        <fieldset class="grid_3">
+            <legend>Layer Types</legend>
+            {% for layer in release_28.layers %}
+            <div>
+              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
+              <label for="{{ layer }}">{{ layer|friendly_name }}</label>
+              <small>[<a href="{{ layer|release_28_link }}">docs</a>]</small>
+            </div>
+            {% endfor %}
+        </fieldset>
+        <fieldset class="grid_3">
+          <legend>Controls</legend>
+          {% for control in release_28.controls %}
+          <div>
+            <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
+            <label for="{{ control }}">{{ control|friendly_name }}</label>
+            <small>[<a href=" {{ control|release_28_link }}">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
+        <fieldset class="grid_2">
+          <legend>Languages</legend>
+          {% for language in release_28.languages %}
+          <div>
+            <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
+            <label for="{{ language }}">{{ language|friendly_name }}</label>
+            <small>[<a href="{{ language|release_28_link }}">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
+        <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
+      </form>
+    </div>
       <div class="footer" class="grid_12">
         2009 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com
       </div>

@@ -20,111 +20,9 @@ from google.appengine.ext.webapp import template
 from google.appengine.ext import webapp
 
 import build, mergejs
+from collections import defaultdict
 
-layers = [
-  'ArcGIS93Rest',
-  'ArcIMS',
-  'Boxes',
-  'EventPane',
-  'FixedZoomLevels',
-  'GML',
-  'GeoRSS',
-  'Google',
-  'Grid',
-  'HTTPRequest',
-  'Image',
-  'KaMap',
-  'KaMapCache',
-  'MapGuide',
-  'MapServer',
-  'Markers',
-  'MultiMap',
-  'PointTrack',
-  'SphericalMercator',
-  'TMS',
-  'Text',
-  'Vector',
-  'VirtualEarth',
-  'WFS',
-  'WMS',
-  'WorldWind',
-  'XYZ',
-  'Yahoo']
-
-controls = [
-  'ArgParser',
-  'Attribution',
-  'Button',
-  'DragFeature',
-  'DragPan',
-  'DrawFeature',
-  'EditingToolbar',
-  'GetFeature',
-  'KeyboardDefaults',
-  'LayerSwitcher',
-  'Measure',
-  'ModifyFeature',
-  'MouseDefaults',
-  'MousePosition',
-  'MouseToolbar',
-  'NavToolbar',
-  'Navigation',
-  'NavigationHistory',
-  'OverviewMap',
-  'Pan',
-  'PanPanel',
-  'PanZoom',
-  'PanZoomBar',
-  'Panel',
-  'Permalink',
-  'Scale',
-  'ScaleLine',
-  'SelectFeature',
-  'Snapping',
-  'Split',
-  'WMSGetFeatureInfo',
-  'ZoomBox',
-  'ZoomIn',
-  'ZoomOut',
-  'ZoomPanel',
-  'ZoomToMaxExtent']
-
-languages = [
-  'ar',
-  'be-tarask',
-  'ca',
-  'cs-CZ',
-  'da-DK',
-  'de',
-  'en-CA',
-  'en',
-  'es',
-  'fi',
-  'fr',
-  'gl',
-  'gsw',
-  'hsb',
-  'ia',
-  'io',
-  'is',
-  'it',
-  'ja',
-  'km',
-  'ksh',
-  'nb',
-  'nl',
-  'nn',
-  'no',
-  'oc',
-  'pt-BR',
-  'pt',
-  'ru',
-  'sk',
-  'sv-SE',
-  'te',
-  'vi',
-  'zh-CN',
-  'zh-TW']
+template.register_template_library('templatetags.options')
 
 first = [
   'OpenLayers/SingleFile.js',
@@ -148,16 +46,22 @@ def all_formats(file_path):
 class MainHandler(webapp.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
+    release_28 = mergejs.scanjs('openlayers_src/release-2.8/lib')
     trunk = mergejs.scanjs('openlayers_src/trunk/lib')
-    trunk_layers =   filter(all_layers, trunk)
-    trunk_controls = filter(all_controls, trunk)
-    trunk_languages = filter(all_languages, trunk)
-    trunk_formats = filter(all_formats, trunk)
+    trunk = {
+        'layers': filter(all_layers, trunk),
+        'controls': filter(all_controls, trunk),
+        'languages': filter(all_languages, trunk),
+        'formats': filter(all_formats, trunk),
+        }
+    release_28 = {
+        'layers': filter(all_layers, release_28),
+        'controls': filter(all_controls, release_28),
+        'languages': filter(all_languages, release_28),
+        'formats': filter(all_formats, release_28),
+        }
     template_values = {
-        'layers': trunk_layers,
-        'controls': trunk_controls,
-        'formats': trunk_formats,
-        'languages': trunk_languages}
+        'trunk': trunk, 'release_28': release_28}
     self.response.out.write(template.render(path, template_values))
 
 class OpenLayerer(webapp.RequestHandler):
@@ -168,12 +72,9 @@ class OpenLayerer(webapp.RequestHandler):
     languages = self.request.get_all('language')
     version = self.request.get('version')
 
-    control_list = ['OpenLayers/Control/%s.js' % i for i in controls]
-    layer_list = ['OpenLayers/Layer/%s.js' % i for i in layers]
-    language_list = ['OpenLayers/Lang/%s.js' % i for i in languages]
 
     forceFirst = first
-    include = control_list + layer_list + language_list
+    include = controls + layers + languages
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
     merged = mergejs.merge('openlayers_src/%s/lib' % version, config)

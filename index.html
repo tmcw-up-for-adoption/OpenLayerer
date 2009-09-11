@@ -7,13 +7,14 @@
         font-family: "Arial", sans-serif;
         font-size: 13px;
         color: #333;
+        background-color: #eee;
       }
       a {
         text-decoration: none;
       }
       small,
       small a {
-        color: #ddd;
+        color: #aaa;
         font-size: 7px;
       }
       small a:hover {
@@ -34,6 +35,10 @@
       }
       .footer {
         padding-top: 20px;
+      }
+
+      .generate_button {
+        font-size: 18px;
       }
     </style>
   </head>
@@ -89,7 +94,7 @@
           </div>
           {% endfor %}
         </fieldset>
-        <input type="submit" value="Do It" /> (generate OpenLayers.js)
+        <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
       </form>
       <div class="footer" class="grid_12">
         2009 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com

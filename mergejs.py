@@ -106,6 +106,8 @@ class Config:
     def read(self, filename):
         """
         Parses the content of the named file and stores the values.
+        :param filename: the path to a configuration file
+        :return none
         """
         lines = [re.sub("#.*?$", "", line).strip() # Assumes end-of-line character is present
                  for line in open(filename)
@@ -117,15 +119,12 @@ class Config:
         self.include =  lines[lines.index("[include]") + 1:lines.index("[exclude]")]
         self.exclude =  lines[lines.index("[exclude]") + 1:]
 
-
-def merge (sourceDirectory, config = None):
-    """ Merges source files within a given directory according to a configuration
-    :param sourceDirectory: a string designating the path of the OpenLayers source
-    :param config: a mergejs.Config object
+def scanjs(sourceDirectory, config = None):
+    """ scans scanDirectory recursively and returns a list of paths to javascript files
+    :param sourceDirectory: the directory root
+    :return list object of all file paths
     """
-
     allFiles = []
-
     ## Find all the Javascript source files
     for root, dirs, files in os.walk(sourceDirectory):
         for filename in files:
@@ -137,13 +136,21 @@ def merge (sourceDirectory, config = None):
                         allFiles.append(filepath)
                 elif (not config) or (filepath not in config.exclude):
                     allFiles.append(filepath)
+    return allFiles
+
+def merge (sourceDirectory, config = None):
+    """ Merges source files within a given directory according to a configuration
+    :param sourceDirectory: a string designating the path of the OpenLayers source
+    :param config: a mergejs.Config object
+    """
+    from toposort import toposort
+
+    allFiles = scanjs(sourceDirectory, config)
 
     ## Header inserted at the start of each file in the output
     HEADER = "/* " + "=" * 70 + "\n    %s\n" + "   " + "=" * 70 + " */\n\n"
 
     files = {}
-
-    order = [] # List of filepaths to output, in a dependency satisfying order 
 
     ## Import file source code
     ## TODO: Do import when we walk the directories above?
@@ -151,9 +158,6 @@ def merge (sourceDirectory, config = None):
         fullpath = os.path.join(sourceDirectory, filepath).strip()
         content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
         files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
-
-
-    from toposort import toposort
 
     complete = False
     resolution_pass = 1
@@ -177,8 +181,6 @@ def merge (sourceDirectory, config = None):
                     fullpath = os.path.join(sourceDirectory, filepath).strip()
                     content = open(fullpath, "U").read() # TODO: Ensure end of line @ EOF?
                     files[filepath] = SourceFile(filepath, content) # TODO: Chop path?
-        
-
 
         # Double check all dependencies have been met
         complete = True

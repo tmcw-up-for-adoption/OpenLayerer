@@ -43,6 +43,9 @@ def all_languages(file_path):
 def all_formats(file_path):
   return re.match("OpenLayers/Format/\w+\.js", file_path) > -1
 
+def all_strategies(file_path):
+  return re.match("OpenLayers/Strategy/\w+\.js", file_path) > -1
+
 class MainHandler(webapp.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
@@ -53,12 +56,14 @@ class MainHandler(webapp.RequestHandler):
         'controls': filter(all_controls, trunk),
         'languages': filter(all_languages, trunk),
         'formats': filter(all_formats, trunk),
+        'strategies': filter(all_strategies, trunk),
         }
     release_28 = {
         'layers': filter(all_layers, release_28),
         'controls': filter(all_controls, release_28),
         'languages': filter(all_languages, release_28),
         'formats': filter(all_formats, release_28),
+        'strategies': filter(all_strategies, release_28),
         }
     template_values = {
         'trunk': trunk, 'release_28': release_28}
@@ -71,13 +76,19 @@ class OpenLayerer(webapp.RequestHandler):
     controls = self.request.get_all('control')
     languages = self.request.get_all('language')
     version = self.request.get('version')
+    strategies = self.request.get('strategies')
 
 
     forceFirst = first
-    include = controls + layers + languages
+    include = controls + layers + languages + strategies
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
-    merged = mergejs.merge('openlayers_src/%s/lib' % version, config)
+    try:
+        merged = mergejs.merge('openlayers_src/%s/lib' % version, config)
+    except:
+        self.response.out.write("An error occurred. Currently a single layer, language, or control must be selected, OpenLayerer does not do empty builds yet.")
+        return
+        
     output = file('license.txt').read() + build.minimize(merged)
 
     # Force client to download file

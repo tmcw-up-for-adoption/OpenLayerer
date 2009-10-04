@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/examples
 http://svn.openlayers.org
 
 
 
-2009-09-08T17:09:04.544008Z
-9646
-tschaub
+2009-09-17T12:05:38.592113Z
+9671
+pagameba
 
 
 
@@ -570,40 +570,6 @@ has-props
 
 2609
 
-georss-markers.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-9a4dbb9b6d1940c7a9d008aa13fee9ed
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1479
-
 kamap.txt
 file
 
@@ -637,6 +603,40 @@ has-props
 
 
 21637
+
+georss-markers.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+9a4dbb9b6d1940c7a9d008aa13fee9ed
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1479
 
 google-reproject.html
 file
@@ -882,10 +882,10 @@ file
 
 
 
-2009-09-10T13:36:34.000000Z
-e52f8f26330d7f1f2e4dbc676872f486
-2009-03-12T13:19:06.945684Z
-9026
+2009-09-24T23:59:31.000000Z
+c896d56eab47941c9d5d6485a3262aa6
+2009-09-14T10:25:54.310693Z
+9665
 ahocevar
 
 
@@ -1012,40 +1012,6 @@ has-props
 
 3518
 
-events.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-9ad97cf06be6a5327ab7373cd297b5f3
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5278
-
 marker-shadow.html
 file
 
@@ -1079,6 +1045,40 @@ tschaub
 
 
 5471
+
+events.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+9ad97cf06be6a5327ab7373cd297b5f3
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5278
 
 overviewmap.html
 file
@@ -2205,40 +2205,6 @@ ahocevar
 
 2047
 
-protocol-gears.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-f0d1026ce24565c2a238975fcf2b2368
-2008-11-16T18:26:39.316968Z
-8382
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8613
-
 KMLParser.html
 file
 
@@ -2272,6 +2238,40 @@ has-props
 
 
 1626
+
+protocol-gears.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+f0d1026ce24565c2a238975fcf2b2368
+2008-11-16T18:26:39.316968Z
+8382
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8613
 
 ve-novibrate.html
 file
@@ -2341,40 +2341,6 @@ has-props
 
 1672
 
-getfeatureinfo.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-dfbe0fc8c4003c5c656c6efb397cfa6a
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2391
-
 urban.html
 file
 
@@ -2408,6 +2374,40 @@ has-props
 
 
 1414
+
+getfeatureinfo.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+dfbe0fc8c4003c5c656c6efb397cfa6a
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2391
 
 osm-layer.html
 file
@@ -2443,40 +2443,6 @@ has-props
 
 5827
 
-ordering.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-27c738a8488e59cfa0482a37c161cad0
-2009-04-19T08:53:25.343127Z
-9307
-ahocevar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9690
-
 vector-features-with-text.html
 file
 
@@ -2510,6 +2476,40 @@ has-props
 
 
 4516
+
+ordering.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+27c738a8488e59cfa0482a37c161cad0
+2009-04-19T08:53:25.343127Z
+9307
+ahocevar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9690
 
 arcims-thematic.html
 file
@@ -2579,17 +2579,18 @@ tschaub
 
 5747
 
-pan-zoom-panels.html
+boxes.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-f357057d8cd639f86a43e364846ee978
-2009-03-12T20:04:34.462919Z
-9038
+a51d4f499565046862358fb570db2a0c
+2008-05-08T08:15:07.746940Z
+7095
 tschaub
+has-props
 
 
 
@@ -2610,8 +2611,7 @@ tschaub
 
 
 
-
-1835
+1850
 
 editingtoolbar-outside.html
 file
@@ -2647,18 +2647,17 @@ has-props
 
 1818
 
-boxes.html
+pan-zoom-panels.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-a51d4f499565046862358fb570db2a0c
-2008-05-08T08:15:07.746940Z
-7095
+f357057d8cd639f86a43e364846ee978
+2009-03-12T20:04:34.462919Z
+9038
 tschaub
-has-props
 
 
 
@@ -2679,7 +2678,8 @@ has-props
 
 
 
-1850
+
+1835
 
 intersects.html
 file
@@ -2783,40 +2783,6 @@ tschaub
 
 2697
 
-mapguide.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-f270f4ad80b5bba900de9b6f3883cc57
-2009-03-11T06:22:24.239800Z
-9006
-crschmidt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5672
-
 example.html
 file
 
@@ -2851,18 +2817,17 @@ has-props
 
 1896
 
-accessible.html
+mapguide.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-4ba182f91f1cc8d701123f39d08c80d6
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
+f270f4ad80b5bba900de9b6f3883cc57
+2009-03-11T06:22:24.239800Z
+9006
+crschmidt
 
 
 
@@ -2883,7 +2848,8 @@ has-props
 
 
 
-5071
+
+5672
 
 kml-layer.html
 file
@@ -2919,14 +2885,14 @@ has-props
 
 1371
 
-outOfRangeMarkers.html
+accessible.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-92048779ac7097aff361daf2152e8140
+4ba182f91f1cc8d701123f39d08c80d6
 2008-05-08T08:15:07.746940Z
 7095
 tschaub
@@ -2951,7 +2917,7 @@ has-props
 
 
 
-2515
+5071
 
 navigation-history.html
 file
@@ -2986,6 +2952,40 @@ fredj
 
 
 1780
+
+outOfRangeMarkers.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+92048779ac7097aff361daf2152e8140
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2515
 
 wfs-reprojection.html
 file
@@ -3089,18 +3089,17 @@ has-props
 
 2053
 
-markers.html
+wfs-protocol-transactions.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-a4eac8068b3b97bed0e6c06a5698dad1
-2008-05-08T08:15:07.746940Z
-7095
+11843fdd26c29f18165b1b3358572252
+2009-03-11T13:51:10.930182Z
+9009
 tschaub
-has-props
 
 
 
@@ -3121,41 +3120,8 @@ has-props
 
 
 
-2294
-
-mapserver.html
-file
 
-
-
-
-2009-09-10T13:36:34.000000Z
-956e572ba33ac3f77f6a6fdfa7f18a09
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1268
+7586
 
 fractional-zoom.html
 file
@@ -3191,17 +3157,18 @@ has-props
 
 2102
 
-wfs-protocol-transactions.html
+mapserver.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-11843fdd26c29f18165b1b3358572252
-2009-03-11T13:51:10.930182Z
-9009
+956e572ba33ac3f77f6a6fdfa7f18a09
+2008-05-08T08:15:07.746940Z
+7095
 tschaub
+has-props
 
 
 
@@ -3222,8 +3189,41 @@ tschaub
 
 
 
+1268
+
+markers.html
+file
 
-7586
+
+
+
+2009-09-10T13:36:34.000000Z
+a4eac8068b3b97bed0e6c06a5698dad1
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2294
 
 mvs.html
 file
@@ -3775,40 +3775,6 @@ has-props
 
 5794
 
-navtoolbar-alwaysZoom.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-6d43a3343400e0c31fcfa86dae1f1b81
-2009-03-10T03:50:01.469546Z
-8977
-crschmidt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2543
-
 all-overlays.html
 file
 
@@ -3842,6 +3808,40 @@ tschaub
 
 
 2725
+
+navtoolbar-alwaysZoom.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+6d43a3343400e0c31fcfa86dae1f1b81
+2009-03-10T03:50:01.469546Z
+8977
+crschmidt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2543
 
 navigation-control.html
 file
@@ -4047,40 +4047,6 @@ has-props
 
 3170
 
-stylemap.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-e7219851143eca531b052de4485a53f0
-2008-10-28T03:03:19.702711Z
-8213
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3778
-
 georss.xml
 file
 
@@ -4114,6 +4080,40 @@ has-props
 
 
 27114
+
+stylemap.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+e7219851143eca531b052de4485a53f0
+2008-10-28T03:03:19.702711Z
+8213
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3778
 
 zoomLevels.html
 file
@@ -4183,40 +4183,6 @@ has-props
 
 2401
 
-yelp-georss.xml
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-c8c952d78f210a471c11aaacf4a75779
-2007-12-08T14:21:53.115500Z
-5362
-crschmidt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10746
-
 strategy-paging.html
 file
 
@@ -4250,6 +4216,40 @@ tschaub
 
 
 3703
+
+yelp-georss.xml
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+c8c952d78f210a471c11aaacf4a75779
+2007-12-08T14:21:53.115500Z
+5362
+crschmidt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10746
 
 data
 dir
@@ -4362,11 +4362,11 @@ file
 
 
 
-2009-09-10T13:36:34.000000Z
-8b62934a1f3122ddbfed5f3b56300e1f
-2009-04-12T16:05:19.676793Z
-9272
-crschmidt
+2009-09-24T23:59:31.000000Z
+d7c92e30917c2a469024158ac502679f
+2009-09-16T02:13:15.836489Z
+9670
+tschaub
 has-props
 
 
@@ -4388,7 +4388,7 @@ has-props
 
 
 
-2361
+2362
 
 restricted-extent.html
 file
@@ -4838,11 +4838,11 @@ file
 
 
 
-2009-09-10T13:36:35.000000Z
-f07082909a9d2ca76a6d491b50b97b94
-2009-04-13T13:35:13.183544Z
-9278
-ahocevar
+2009-09-24T23:59:31.000000Z
+305aeabdca52ec27c1f6de32a50e75a8
+2009-09-17T12:05:38.592113Z
+9671
+pagameba
 has-props
 
 
@@ -4864,7 +4864,7 @@ has-props
 
 
 
-5407
+5964
 
 tasmania
 dir

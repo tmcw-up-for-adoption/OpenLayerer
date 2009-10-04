@@ -1,14 +1,14 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/Renderer
 http://svn.openlayers.org
 
 
 
-2009-07-30T22:27:23.811015Z
-9601
+2009-09-14T10:25:54.310693Z
+9665
 ahocevar
 
 
@@ -66,10 +66,10 @@ file
 
 
 
-2009-09-10T13:36:32.000000Z
-fd0f3f1ba41c3eb8a3254266f4bc0ce5
-2009-04-16T06:59:19.909688Z
-9301
+2009-09-24T23:59:31.000000Z
+25bb61507f73fcf013daeb8c2e1ab3b3
+2009-09-14T10:25:54.310693Z
+9665
 ahocevar
 has-props
 
@@ -92,7 +92,7 @@ has-props
 
 
 
-12646
+13252
 
 SVG.html
 file

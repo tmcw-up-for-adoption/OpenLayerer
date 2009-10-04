@@ -1,14 +1,14 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/Format
 http://svn.openlayers.org
 
 
 
-2009-08-07T22:35:55.231457Z
-9615
+2009-09-11T22:48:56.540395Z
+9664
 tschaub
 
 
@@ -66,6 +66,9 @@ ahocevar
 
 23738
 
+SLD
+dir
+
 GML.html
 file
 
@@ -100,7 +103,7 @@ has-props
 
 28608
 
-SLD
+WFST
 dir
 
 WMSCapabilities.html
@@ -137,7 +140,7 @@ tschaub
 
 402
 
-WFST
+Filter
 dir
 
 SLD.html
@@ -174,42 +177,11 @@ has-props
 
 1836
 
-Filter
+WMC
 dir
 
-KML.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-4d942a1c588de59ed9e2e7629861de71
-2009-03-18T18:15:47.072795Z
-9089
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-12805
+ArcXML
+dir
 
 WFST.html
 file
@@ -245,11 +217,39 @@ tschaub
 
 647
 
-ArcXML
-dir
-
-WMC
-dir
+KML.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+4d942a1c588de59ed9e2e7629861de71
+2009-03-18T18:15:47.072795Z
+9089
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12805
 
 Text.html
 file

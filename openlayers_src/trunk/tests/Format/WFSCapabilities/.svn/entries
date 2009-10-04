@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/Format/WFSCapabilities
 http://svn.openlayers.org
 
 
 
-2009-04-06T21:32:46.366768Z
-9219
-ahocevar
+2009-09-11T19:17:10.372408Z
+9658
+tschaub
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2009-09-10T13:36:32.000000Z
-40cd7e17be3bf28db54b11b5d62578bf
-2009-04-06T21:32:46.366768Z
-9219
-ahocevar
+2009-09-24T23:59:30.000000Z
+31ce35695fed1286791b893dbf519065
+2009-09-11T19:17:10.372408Z
+9658
+tschaub
 has-props
 
 
@@ -58,5 +58,5 @@ has-props
 
 
 
-45730
+47747
 

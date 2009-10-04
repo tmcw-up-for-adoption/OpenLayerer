@@ -70,12 +70,11 @@
       <div class="clearfix" id="version_trunk">
         <h2>Trunk</h2>
       <form action="/openlayerer" method="POST">
-        <div class="grid_3">
 
           <input type="hidden" name="version" value="trunk" />
           <!-- trunk -->
 
-          <fieldset class="grid_3">
+          <fieldset class="grid_2">
             <legend>Layer Types</legend>
             {% for layer in trunk.layers %}
             <div>
@@ -85,8 +84,7 @@
             </div>
             {% endfor %}
           </fieldset>
-        </div>
-        <fieldset class="grid_3">
+        <fieldset class="grid_2">
           <legend>Controls</legend>
           {% for control in trunk.controls %}
           <div>
@@ -96,7 +94,7 @@
           </div>
           {% endfor %}
         </fieldset>
-        <fieldset class="grid_2">
+        <fieldset class="grid_1">
           <legend>Languages</legend>
           {% for language in trunk.languages %}
           <div>
@@ -106,6 +104,17 @@
           </div>
           {% endfor %}
         </fieldset>
+        <fieldset class="grid_2">
+          <legend>Strategies</legend>
+          {% for strategy in trunk.strategies %}
+          <div>
+            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy }}" />
+            <label for="{{ strategy }}">{{ strategy|friendly_name }}</label>
+            <small>[<a href="{{ strategy|trunk_link }}">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
+
         <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
       </form>
     </div>
@@ -119,7 +128,7 @@
         <h2>Release 2.8</h2>
       <form action="/openlayerer" method="POST">
         <input type="hidden" name="version" value="trunk" />
-        <fieldset class="grid_3">
+        <fieldset class="grid_2">
             <legend>Layer Types</legend>
             {% for layer in release_28.layers %}
             <div>
@@ -129,7 +138,7 @@
             </div>
             {% endfor %}
         </fieldset>
-        <fieldset class="grid_3">
+        <fieldset class="grid_2">
           <legend>Controls</legend>
           {% for control in release_28.controls %}
           <div>
@@ -139,13 +148,23 @@
           </div>
           {% endfor %}
         </fieldset>
-        <fieldset class="grid_2">
+        <fieldset class="grid_1">
           <legend>Languages</legend>
           {% for language in release_28.languages %}
           <div>
             <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
             <label for="{{ language }}">{{ language|friendly_name }}</label>
             <small>[<a href="{{ language|release_28_link }}">docs</a>]</small>
+          </div>
+          {% endfor %}
+        </fieldset>
+        <fieldset class="grid_2">
+          <legend>Strategies</legend>
+          {% for strategy in release_28.strategies %}
+          <div>
+            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy }}" />
+            <label for="{{ strategy }}">{{ strategy|friendly_name }}</label>
+            <small>[<a href="{{ strategy|release_28_link }}">docs</a>]</small>
           </div>
           {% endfor %}
         </fieldset>

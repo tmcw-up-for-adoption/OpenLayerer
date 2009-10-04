@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Layer
 http://svn.openlayers.org
 
 
 
-2009-08-13T06:31:47.910578Z
-9618
-elemoine
+2009-09-21T18:22:40.376275Z
+9686
+crschmidt
 
 
 
@@ -100,11 +100,11 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-a61248659de75b7ec8d589d0aed00575
-2008-09-04T16:57:56.819844Z
-7947
-euzuro
+2009-09-24T23:59:31.000000Z
+c1a515ab5580a3276dce2e012371b06a
+2009-09-16T00:15:39.646846Z
+9668
+tschaub
 has-props
 
 
@@ -126,7 +126,7 @@ has-props
 
 
 
-9158
+9209
 
 Google.js
 file
@@ -236,11 +236,11 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-a7c66b18e7fc4cda5e713c84db3e7720
-2009-02-17T12:05:39.927898Z
-8864
-crschmidt
+2009-09-24T23:59:31.000000Z
+fcc3d9a035d42435213c20207c9d9beb
+2009-09-18T16:47:52.461409Z
+9679
+tschaub
 has-props
 
 
@@ -262,7 +262,7 @@ has-props
 
 
 
-11424
+11475
 
 GML.js
 file
@@ -338,10 +338,10 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-cd94bf7291523586e2a71c400418f644
-2009-02-28T21:53:22.576718Z
-8917
+2009-09-24T23:59:31.000000Z
+bf9bb346dc0288c8dd0babd3a708e1f9
+2009-09-21T18:22:40.376275Z
+9686
 crschmidt
 
 
@@ -364,7 +364,7 @@ crschmidt
 
 
 
-8623
+8630
 
 Image.js
 file
@@ -542,11 +542,11 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-145a6ea53b9717e7146c693e1fa47f4e
-2009-04-08T20:11:20.034793Z
-9247
-crschmidt
+2009-09-24T23:59:31.000000Z
+f3efe4c0d00f903dd45e98af63dff054
+2009-09-11T08:12:24.343401Z
+9656
+fredj
 
 
 
@@ -569,6 +569,9 @@ crschmidt
 
 
 5542
+
+WMS
+dir
 
 MapGuide.js
 file
@@ -604,43 +607,6 @@ crschmidt
 
 18505
 
-WMS
-dir
-
-Vector.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-6ef6110da8c11586229bbb11d3c0db64
-2009-07-20T08:42:42.477342Z
-9567
-elemoine
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-28215
-
 GeoRSS.js
 file
 
@@ -674,6 +640,40 @@ has-props
 
 
 8551
+
+Vector.js
+file
+
+
+
+
+2009-09-24T23:59:31.000000Z
+58cb94d88b83336ecce318c441ecee87
+2009-09-17T13:08:52.475585Z
+9674
+ahocevar
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+28355
 
 TMS.js
 file
@@ -916,40 +916,6 @@ has-props
 Vector
 dir
 
-MultiMap.js
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-98d107bee82d7a3a225826ab45a58582
-2008-04-09T16:52:08.552548Z
-6833
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7226
-
 HTTPRequest.js
 file
 
@@ -983,6 +949,40 @@ has-props
 
 
 7828
+
+MultiMap.js
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+98d107bee82d7a3a225826ab45a58582
+2008-04-09T16:52:08.552548Z
+6833
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7226
 
 MapServer
 dir

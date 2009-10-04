@@ -1,7 +1,7 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/manual
 http://svn.openlayers.org
 
@@ -332,17 +332,17 @@ ahocevar
 
 2097
 
-rendered-dimensions.html
+ajax.txt
 file
 
 
 
 
 2009-09-10T13:36:31.000000Z
-0d3d190d364526213986409088511834
-2009-05-15T15:36:21.065452Z
-9384
-crschmidt
+1bf21c602de9e98b9e77078b7ba93d1b
+2007-12-20T09:26:53.148146Z
+5535
+tschaub
 
 
 
@@ -364,7 +364,7 @@ crschmidt
 
 
 
-1645
+18
 
 reflow.html
 file
@@ -400,17 +400,17 @@ crschmidt
 
 1708
 
-ajax.txt
+rendered-dimensions.html
 file
 
 
 
 
 2009-09-10T13:36:31.000000Z
-1bf21c602de9e98b9e77078b7ba93d1b
-2007-12-20T09:26:53.148146Z
-5535
-tschaub
+0d3d190d364526213986409088511834
+2009-05-15T15:36:21.065452Z
+9384
+crschmidt
 
 
 
@@ -432,7 +432,7 @@ tschaub
 
 
 
-18
+1645
 
 clip-features-svg.html
 file

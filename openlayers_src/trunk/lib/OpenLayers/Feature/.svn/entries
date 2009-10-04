@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Feature
 http://svn.openlayers.org
 
 
 
-2009-04-13T20:30:36.566667Z
-9284
-ahocevar
+2009-09-17T12:05:38.592113Z
+9671
+pagameba
 
 
 
@@ -66,11 +66,11 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-e4c9bc3a16f434425f37cd133816a326
-2009-04-13T20:30:36.566667Z
-9284
-ahocevar
+2009-09-24T23:59:31.000000Z
+dcd72e520c3c4bbf67c81b3f1b8e8ffc
+2009-09-17T12:05:38.592113Z
+9671
+pagameba
 has-props
 
 
@@ -92,5 +92,5 @@ has-props
 
 
 
-14747
+14882
 

@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/speed
 http://svn.openlayers.org
 
 
 
-2009-03-06T17:42:41.634737Z
-8957
-crschmidt
+2009-09-11T20:23:48.660004Z
+9660
+tschaub
 
 
 
@@ -25,6 +25,40 @@ crschmidt
 
 
 dc9f47b5-9b13-0410-9fdd-eb0c1a62fdaf
+
+wmscaps.html
+file
+
+
+
+
+2009-09-24T23:59:30.000000Z
+49fa40f5bade3cd047dc4c0051f07fc1
+2009-09-11T20:23:48.660004Z
+9660
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1694
 
 string_format.html
 file
@@ -60,6 +94,40 @@ crschmidt
 
 622
 
+wmscaps.js
+file
+
+
+
+
+2009-09-24T23:59:30.000000Z
+00c63a6d40c052953bac5a9a088233b9
+2009-09-11T20:02:21.656311Z
+9659
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+177347
+
 wmc_speed.html
 file
 
@@ -93,6 +161,40 @@ crschmidt
 
 
 6311
+
+wmscaps.xml
+file
+
+
+
+
+2009-09-24T23:59:30.000000Z
+89e62769ec634fa9ea3f6fac24611e79
+2009-09-11T20:02:21.656311Z
+9659
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+157519
 
 geometry.html
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/Control
 http://svn.openlayers.org
 
@@ -366,18 +366,17 @@ has-props
 
 10160
 
-GetFeature.html
+Split.html
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-bc35d9b3d8c1e437bd2803712d7542c3
-2009-09-10T06:50:45.752417Z
-9650
-elemoine
-has-props
+508a63a4b1962e77bd5672b184c61480
+2009-03-10T22:06:19.925336Z
+8998
+tschaub
 
 
 
@@ -398,7 +397,8 @@ has-props
 
 
 
-4775
+
+11511
 
 SelectFeature.html
 file
@@ -434,17 +434,18 @@ has-props
 
 15691
 
-Split.html
+GetFeature.html
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-508a63a4b1962e77bd5672b184c61480
-2009-03-10T22:06:19.925336Z
-8998
-tschaub
+bc35d9b3d8c1e437bd2803712d7542c3
+2009-09-10T06:50:45.752417Z
+9650
+elemoine
+has-props
 
 
 
@@ -465,8 +466,7 @@ tschaub
 
 
 
-
-11511
+4775
 
 WMSGetFeatureInfo.html
 file

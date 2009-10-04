@@ -1,7 +1,7 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/tests/Layer
 http://svn.openlayers.org
 
@@ -536,40 +536,6 @@ crschmidt
 
 7143
 
-Vector.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-846b72f1b6552038f0c5df19a28a3d02
-2009-04-10T19:22:14.546663Z
-9265
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-24854
-
 GeoRSS.html
 file
 
@@ -603,6 +569,40 @@ has-props
 
 
 10409
+
+Vector.html
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+846b72f1b6552038f0c5df19a28a3d02
+2009-04-10T19:22:14.546663Z
+9265
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24854
 
 TMS.html
 file
@@ -808,40 +808,6 @@ has-props
 
 3955
 
-WrapDateLine.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-3df0492c6f99d2a23da1d3c7a488c4cf
-2008-03-31T05:03:49.114704Z
-6719
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10037
-
 FixedZoomLevels.html
 file
 
@@ -876,16 +842,16 @@ has-props
 
 3799
 
-data_Layer_Text_textfile.txt
+WrapDateLine.html
 file
 
 
 
 
 2009-09-10T13:36:31.000000Z
-502eea3fb7af848c3ebb3156c5fc27fd
-2008-03-31T02:41:26.124751Z
-6712
+3df0492c6f99d2a23da1d3c7a488c4cf
+2008-03-31T05:03:49.114704Z
+6719
 crschmidt
 has-props
 
@@ -908,75 +874,7 @@ has-props
 
 
 
-120
-
-atom-1.0.xml
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-cb36d21de1a1f56c7ab5ac98ba35a0aa
-2008-03-31T02:41:26.124751Z
-6712
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1132
-
-HTTPRequest.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-7a9774b3aba32e8843a7632f5ad348d8
-2009-08-13T06:31:47.910578Z
-9618
-elemoine
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9975
+10037
 
 MultiMap.html
 file
@@ -1012,6 +910,111 @@ has-props
 
 3997
 
+HTTPRequest.html
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+7a9774b3aba32e8843a7632f5ad348d8
+2009-08-13T06:31:47.910578Z
+9618
+elemoine
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9975
+
+atom-1.0.xml
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+cb36d21de1a1f56c7ab5ac98ba35a0aa
+2008-03-31T02:41:26.124751Z
+6712
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1132
+
+data_Layer_Text_textfile.txt
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+502eea3fb7af848c3ebb3156c5fc27fd
+2008-03-31T02:41:26.124751Z
+6712
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+120
+
+Vector
+dir
+
 WFS.html
 file
 
@@ -1045,9 +1048,6 @@ has-props
 
 
 7535
-
-Vector
-dir
 
 Markers.html
 file

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/!svn/ver/9601/trunk/openlayers/tests/Renderer
+/!svn/ver/9665/trunk/openlayers/tests/Renderer
 END
 Elements.html
 K 25
@@ -13,7 +13,7 @@ VML.html
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/!svn/ver/9301/trunk/openlayers/tests/Renderer/VML.html
+/!svn/ver/9665/trunk/openlayers/tests/Renderer/VML.html
 END
 SVG.html
 K 25

@@ -1,15 +1,15 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers
 http://svn.openlayers.org
 
 
 
-2009-09-10T06:50:45.752417Z
-9650
-elemoine
+2009-09-21T18:22:40.376275Z
+9686
+crschmidt
 has-props
 
 
@@ -30,6 +30,9 @@ apidoc_config
 dir
 
 art
+dir
+
+doc_config
 dir
 
 news.txt
@@ -66,10 +69,10 @@ has-props
 
 814
 
-doc_config
+build
 dir
 
-build
+tools
 dir
 
 license.txt
@@ -106,13 +109,10 @@ crschmidt
 
 1860
 
-tools
+tests
 dir
 
 theme
-dir
-
-tests
 dir
 
 doc

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/!svn/ver/9284/trunk/openlayers/lib/OpenLayers/Feature
+/!svn/ver/9671/trunk/openlayers/lib/OpenLayers/Feature
 END
 WFS.js
 K 25
@@ -13,5 +13,5 @@ Vector.js
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/!svn/ver/9284/trunk/openlayers/lib/OpenLayers/Feature/Vector.js
+/!svn/ver/9671/trunk/openlayers/lib/OpenLayers/Feature/Vector.js
 END

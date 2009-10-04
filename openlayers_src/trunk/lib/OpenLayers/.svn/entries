@@ -1,14 +1,14 @@
 10
 
 dir
-9653
+9689
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers
 http://svn.openlayers.org
 
 
 
-2009-09-08T13:06:15.232429Z
-9645
+2009-09-21T18:22:40.376275Z
+9686
 crschmidt
 
 
@@ -461,6 +461,9 @@ has-props
 Control
 dir
 
+Marker
+dir
+
 Renderer.js
 file
 
@@ -494,9 +497,6 @@ has-props
 
 
 8538
-
-Marker
-dir
 
 Rule.js
 file
@@ -532,40 +532,6 @@ has-props
 
 6288
 
-Layer.js
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-99caba85395155983a6cb80078e19feb
-2009-08-10T06:10:29.204711Z
-9616
-fredj
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-39735
-
 Projection.js
 file
 
@@ -599,6 +565,40 @@ has-props
 
 
 5617
+
+Layer.js
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+99caba85395155983a6cb80078e19feb
+2009-08-10T06:10:29.204711Z
+9616
+fredj
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+39735
 
 Util.js
 file
@@ -634,10 +634,10 @@ has-props
 
 51882
 
-Geometry
+Feature
 dir
 
-Feature
+Geometry
 dir
 
 Marker.js
@@ -890,11 +890,11 @@ file
 
 
 
-2009-09-10T13:36:34.000000Z
-7865c13466c5ba63beb562433ce1088b
-2009-06-12T20:06:12.303881Z
-9475
-crschmidt
+2009-09-24T23:59:31.000000Z
+cf0e0772cfbf6b2d7d4d21c8b9e02316
+2009-09-17T17:17:11.347659Z
+9676
+pagameba
 has-props
 
 
@@ -916,7 +916,7 @@ has-props
 
 
 
-13371
+13623
 
 Layer
 dir

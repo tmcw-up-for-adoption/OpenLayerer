@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/!svn/ver/9571/trunk/openlayers/tests/Format/WMSCapabilities
+/!svn/ver/9664/trunk/openlayers/tests/Format/WMSCapabilities
 END
 v1_1_1.js
 K 25
@@ -13,5 +13,5 @@ v1_1_1.html
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/!svn/ver/9571/trunk/openlayers/tests/Format/WMSCapabilities/v1_1_1.html
+/!svn/ver/9664/trunk/openlayers/tests/Format/WMSCapabilities/v1_1_1.html
 END

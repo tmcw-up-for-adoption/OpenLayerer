@@ -46,6 +46,9 @@ def all_formats(file_path):
 def all_strategies(file_path):
   return re.match("OpenLayers/Strategy/\w+\.js", file_path) > -1
 
+def all_protocols(file_path):
+  return re.match("OpenLayers/Protocol/\w+\.js", file_path) > -1
+
 class MainHandler(webapp.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
@@ -57,6 +60,7 @@ class MainHandler(webapp.RequestHandler):
         'languages': filter(all_languages, trunk),
         'formats': filter(all_formats, trunk),
         'strategies': filter(all_strategies, trunk),
+        'protocols': filter(all_protocols, trunk),
         }
     release_28 = {
         'layers': filter(all_layers, release_28),
@@ -64,6 +68,7 @@ class MainHandler(webapp.RequestHandler):
         'languages': filter(all_languages, release_28),
         'formats': filter(all_formats, release_28),
         'strategies': filter(all_strategies, release_28),
+        'protocols': filter(all_protocols, release_28),
         }
     template_values = {
         'trunk': trunk, 'release_28': release_28}
@@ -75,12 +80,14 @@ class OpenLayerer(webapp.RequestHandler):
     layers = self.request.get_all('layer')
     controls = self.request.get_all('control')
     languages = self.request.get_all('language')
+    formats = self.request.get_all('format')
+    strategies = self.request.get_all('strategy')
+    protocols = self.request.get_all('protocol')
     version = self.request.get('version')
-    strategies = self.request.get('strategies')
 
 
     forceFirst = first
-    include = controls + layers + languages + strategies
+    include = controls + layers + languages + strategies + protocols + formats
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
     try:

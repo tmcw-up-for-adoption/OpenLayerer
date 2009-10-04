@@ -5,7 +5,8 @@ register = template.create_template_register()
 
 def friendly_name(jsfile):
   matches = re.search('(\w+)\.js', jsfile)
-  return matches.group(1)
+  hyphenated = re.sub('([a-z])([A-Z])', r'\1&shy;\2', matches.group(1))
+  return hyphenated
 
 def trunk_link(jsfile):
   return "http://dev.openlayers.org/docs/files/%s.html" % jsfile.replace('.', '-')

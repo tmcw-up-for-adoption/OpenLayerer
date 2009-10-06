@@ -8,10 +8,14 @@
         function() {
           $('input').click(
             function () {
-              if ($(this).attr('title')) {
-                dependencies = $(this).attr('title').split(',');
-                for (i in dependencies) {
-                  $("input[value='" + dependencies[i] + "']").attr('checked', true);
+              if ($(this).attr('checked') === true) {
+                if ($(this).attr('title')) {
+                  dependencies = $(this).attr('title').split(',');
+                  version = $( $(this).parents('.version')[0] ).attr('id');
+                  console.log(version);
+                  for (i in dependencies) {
+                    $("#"+version+" input[value='" + dependencies[i] + "']").attr('checked', true);
+                  }
                 }
               }
             });
@@ -83,10 +87,9 @@
         </div>
       </div>
 
-      <div class="clearfix" id="version_trunk">
+      <div class="clearfix version" id="trunk">
         <h2>Trunk</h2>
-      <form action="/openlayerer" method="POST">
-
+        <form action="/openlayerer" method="POST">
           <input type="hidden" name="version" value="trunk" />
           {% for opts in trunk %}
           <fieldset class="grid_2">
@@ -96,19 +99,13 @@
             {% endfor %}
           </fieldset>
           {% endfor %}
-        <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
-      </form>
-    </div>
-
-
-
-
-
-
-      <div class="clearfix" id="version_release_28">
+          <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
+        </form>
+      </div>
+      <div class="clearfix version" id="release_28">
         <h2>Release 2.8</h2>
-      <form action="/openlayerer" method="POST">
-        <input type="hidden" name="version" value="release_28" />
+        <form action="/openlayerer" method="POST">
+          <input type="hidden" name="version" value="release_28" />
           {% for opts in release_28 %}
           <fieldset class="grid_2">
           <legend>{{ opts.name }}</legend>
@@ -117,11 +114,9 @@
             {% endfor %}
           </fieldset>
           {% endfor %}
-
-
-        <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
-      </form>
-    </div>
+          <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
+        </form>
+      </div>
       <div class="footer" class="grid_12">
         2009 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com
       </div>

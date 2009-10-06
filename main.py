@@ -49,18 +49,29 @@ def all_strategies(file_path):
 def all_protocols(file_path):
   return re.match("OpenLayers/Protocol/\w+\.js", file_path) > -1
 
+def filename_to_sourcefile(file_path):
+  content = open('openlayers_src/trunk/lib/' + file_path, "U").read() # TODO: Ensure end of line @ EOF?
+  return mergejs.SourceFile(file_path, content) # TODO: Chop path?
+  
+
 class MainHandler(webapp.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
     release_28 = mergejs.scanjs('openlayers_src/release-2.8/lib')
     trunk = mergejs.scanjs('openlayers_src/trunk/lib')
     trunk = {
-        'layers': filter(all_layers, trunk),
-        'controls': filter(all_controls, trunk),
-        'languages': filter(all_languages, trunk),
-        'formats': filter(all_formats, trunk),
-        'strategies': filter(all_strategies, trunk),
-        'protocols': filter(all_protocols, trunk),
+        'layer':    { 'name': 'Layer Types',
+          'options': map(filename_to_sourcefile, filter(all_layers, trunk))},
+        'control':  { 'name': 'Controls',
+          'options': map(filename_to_sourcefile, filter(all_controls, trunk))},
+        'language': { 'name': 'Languages',
+          'options': map(filename_to_sourcefile, filter(all_languages, trunk))},
+        'format':   { 'name': 'Formats',
+          'options': map(filename_to_sourcefile, filter(all_formats, trunk))},
+        'strategy':{ 'name': 'Strategies',
+          'options':  map(filename_to_sourcefile, filter(all_strategies, trunk))},
+        'protocol': { 'name': 'Protocols',
+          'options': map(filename_to_sourcefile, filter(all_protocols, trunk))},
         }
     release_28 = {
         'layers': filter(all_layers, release_28),

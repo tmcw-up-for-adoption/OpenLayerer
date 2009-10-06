@@ -2,6 +2,22 @@
   <head>
     <title>OpenLayerer</title>
     <link type="text/css" rel="stylesheet" media="all" href="style/grid.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(
+        function() {
+          $('input').click(
+            function () {
+              if ($(this).attr('title')) {
+                dependencies = $(this).attr('title').split(',');
+                for (i in dependencies) {
+                  $("input[value='" + dependencies[i] + "']").attr('checked', true);
+                }
+              }
+            });
+          }
+        );
+      </script>
     <style type="text/css">
       body {
         font-family: "Arial", sans-serif;
@@ -73,70 +89,13 @@
 
           <input type="hidden" name="version" value="trunk" />
           <!-- trunk -->
-
-          <fieldset class="grid_2">
-            <legend>Layer Types</legend>
-            {% for layer in trunk.layers %}
-            <div>
-              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
-              <label for="{{ layer }}">{{ layer|friendly_name }}</label>
-              <small>[<a href="{{ layer|trunk_link }}">docs</a>]</small>
-            </div>
+          {% for opts in trunk.items %}
+            <!-- up to the point of control - desc -->
+            {% for o in opts.first.options %}
+              {{ o }}
+              {% include "optionlist.html" %}
             {% endfor %}
-          </fieldset>
-        <fieldset class="grid_2">
-          <legend>Controls</legend>
-          {% for control in trunk.controls %}
-          <div>
-            <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
-            <label for="{{ control }}">{{ control|friendly_name }}</label>
-            <small>[<a href=" {{ control|trunk_link }}">docs</a>]</small>
-          </div>
           {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Languages</legend>
-          {% for language in trunk.languages %}
-          <div>
-            <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
-            <label for="{{ language }}">{{ language|friendly_name }}</label>
-            <small>[<a href="{{ language|trunk_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Formats</legend>
-          {% for format in trunk.formats %}
-          <div>
-            <input type="checkbox" id="{{ format}}" name="format" value="{{ format }}" />
-            <label for="{{ format }}">{{ format|friendly_name }}</label>
-            <small>[<a href="{{ format|trunk_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-
-        <fieldset class="grid_1">
-          <legend>Strategies</legend>
-          {% for strategy in trunk.strategies %}
-          <div>
-            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy }}" />
-            <label for="{{ strategy }}">{{ strategy|friendly_name }}</label>
-            <small>[<a href="{{ strategy|trunk_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Protocols</legend>
-          {% for protocol in trunk.protocols %}
-          <div>
-            <input type="checkbox" id="{{ protocol}}" name="protocol" value="{{ protocol }}" />
-            <label for="{{ protocol }}">{{ protocol|friendly_name }}</label>
-            <small>[<a href="{{ protocol|trunk_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-
-
         <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
       </form>
     </div>
@@ -154,7 +113,7 @@
             <legend>Layer Types</legend>
             {% for layer in release_28.layers %}
             <div>
-              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer }}" />
+              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer.filepath }}" />
               <label for="{{ layer }}">{{ layer|friendly_name }}</label>
               <small>[<a href="{{ layer|release_28_link }}">docs</a>]</small>
             </div>
@@ -164,7 +123,7 @@
           <legend>Controls</legend>
           {% for control in release_28.controls %}
           <div>
-            <input type="checkbox" id="{{ control }}" name="control" value="{{ control }}" />
+            <input type="checkbox" id="{{ control }}" name="control" value="{{ control.filepath }}" />
             <label for="{{ control }}">{{ control|friendly_name }}</label>
             <small>[<a href=" {{ control|release_28_link }}">docs</a>]</small>
           </div>
@@ -174,7 +133,7 @@
           <legend>Languages</legend>
           {% for language in release_28.languages %}
           <div>
-            <input type="checkbox" id="{{ language}}" name="language" value="{{ language }}" />
+            <input type="checkbox" id="{{ language}}" name="language" value="{{ language.filepath }}" />
             <label for="{{ language }}">{{ language|friendly_name }}</label>
             <small>[<a href="{{ language|release_28_link }}">docs</a>]</small>
           </div>
@@ -184,7 +143,7 @@
           <legend>Formats</legend>
           {% for format in release_28.formats %}
           <div>
-            <input type="checkbox" id="{{ format}}" name="format" value="{{ format }}" />
+            <input type="checkbox" id="{{ format}}" name="format" value="{{ format.filepath }}" />
             <label for="{{ format }}">{{ format|friendly_name }}</label>
             <small>[<a href="{{ format|release_28_link }}">docs</a>]</small>
           </div>
@@ -194,7 +153,7 @@
           <legend>Strategies</legend>
           {% for strategy in release_28.strategies %}
           <div>
-            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy }}" />
+            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy.filepath }}" />
             <label for="{{ strategy }}">{{ strategy|friendly_name }}</label>
             <small>[<a href="{{ strategy|release_28_link }}">docs</a>]</small>
           </div>
@@ -204,7 +163,7 @@
           <legend>Protocols</legend>
           {% for protocol in release_28.protocols %}
           <div>
-            <input type="checkbox" id="{{ protocol}}" name="protocol" value="{{ protocol }}" />
+            <input type="checkbox" id="{{ protocol}}" name="protocol" value="{{ protocol.filepath }}" />
             <label for="{{ protocol }}">{{ protocol|friendly_name }}</label>
             <small>[<a href="{{ protocol|release_28_link }}">docs</a>]</small>
           </div>

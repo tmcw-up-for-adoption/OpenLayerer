@@ -1,7 +1,7 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Control
 http://svn.openlayers.org
 
@@ -604,40 +604,6 @@ has-props
 
 13459
 
-Navigation.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-3f2e44fd19bb5f24543bd5b6c3c1d1ae
-2009-07-24T21:58:39.124863Z
-9589
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7192
-
 ScaleLine.js
 file
 
@@ -671,6 +637,40 @@ crschmidt
 
 
 6097
+
+Navigation.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+3f2e44fd19bb5f24543bd5b6c3c1d1ae
+2009-07-24T21:58:39.124863Z
+9589
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7192
 
 Measure.js
 file
@@ -808,40 +808,6 @@ has-props
 
 3533
 
-ZoomIn.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-9ecff34ed6b2f6c3a69243925d30f8b5
-2009-03-12T20:04:34.462919Z
-9038
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-870
-
 Button.js
 file
 
@@ -875,6 +841,40 @@ has-props
 
 
 1162
+
+ZoomIn.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+9ecff34ed6b2f6c3a69243925d30f8b5
+2009-03-12T20:04:34.462919Z
+9038
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+870
 
 ZoomOut.js
 file

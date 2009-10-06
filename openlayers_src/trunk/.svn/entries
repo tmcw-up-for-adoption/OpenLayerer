@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers
 http://svn.openlayers.org
 
 
 
-2009-09-21T18:22:40.376275Z
-9686
-crschmidt
+2009-10-06T08:12:04.940202Z
+9708
+ahocevar
 has-props
 
 
@@ -30,9 +30,6 @@ apidoc_config
 dir
 
 art
-dir
-
-doc_config
 dir
 
 news.txt
@@ -69,10 +66,10 @@ has-props
 
 814
 
-build
+doc_config
 dir
 
-tools
+build
 dir
 
 license.txt
@@ -109,10 +106,13 @@ crschmidt
 
 1860
 
-tests
+tools
 dir
 
 theme
+dir
+
+tests
 dir
 
 doc

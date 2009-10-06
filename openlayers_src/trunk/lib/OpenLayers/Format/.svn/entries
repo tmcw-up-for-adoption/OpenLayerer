@@ -1,14 +1,14 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Format
 http://svn.openlayers.org
 
 
 
-2009-09-18T18:29:20.318712Z
-9681
+2009-10-05T22:34:16.389575Z
+9706
 tschaub
 
 
@@ -69,11 +69,11 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-2ae1bc0b8bbfb38609fd8f18e9cfb3dc
-2009-04-03T20:26:35.092583Z
-9181
-crschmidt
+2009-10-06T15:36:10.000000Z
+f35ccce90d5c48d2a9739a5d4fb9bb0a
+2009-10-05T09:21:07.069402Z
+9700
+elemoine
 has-props
 
 
@@ -95,49 +95,12 @@ has-props
 
 
 
-24674
-
-WMSCapabilities
-dir
-
-WKT.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-85c9c0fe9963c30849d0917a5a677973
-2008-07-31T04:44:25.186772Z
-7627
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13575
-
-SLD
-dir
+24908
 
 WFST
+dir
+
+CSWGetDomain
 dir
 
 WFSCapabilities.js
@@ -174,47 +137,10 @@ has-props
 
 2063
 
-JSON.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-f2e86dbdf5fac73518fbb3cf07ce33b5
-2009-04-03T23:58:16.253825Z
-9182
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-12833
-
 Filter
 dir
 
 WMC
-dir
-
-ArcXML
 dir
 
 WFSDescribeFeatureType.js
@@ -250,6 +176,40 @@ ahocevar
 
 
 6849
+
+CSWGetRecords.js
+file
+
+
+
+
+2009-10-06T15:36:10.000000Z
+66f7c1246a136e9e89e0c33d2ea0f522
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+973
 
 GML.js
 file
@@ -291,10 +251,10 @@ file
 
 
 
-2009-09-24T23:59:31.000000Z
-ed0504d15bf8047d63798131325ef621
-2009-09-18T18:29:20.318712Z
-9681
+2009-10-06T15:36:10.000000Z
+2da809bd3dc4832c9af3facd2682c662
+2009-10-05T22:32:25.618170Z
+9705
 tschaub
 
 
@@ -317,7 +277,7 @@ tschaub
 
 
 
-2177
+2181
 
 SLD.js
 file
@@ -353,40 +313,6 @@ has-props
 
 3955
 
-KML.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-4fa9168df57841596fbdf7048049b5e8
-2009-04-03T19:17:49.125681Z
-9180
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-43836
-
 WFST.js
 file
 
@@ -420,6 +346,40 @@ tschaub
 
 
 929
+
+KML.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+4fa9168df57841596fbdf7048049b5e8
+2009-04-03T19:17:49.125681Z
+9180
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+43836
 
 Text.js
 file
@@ -523,57 +483,20 @@ crschmidt
 
 40490
 
-WMC.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-76d5960b5ff847ec8f93d9f9b5762d36
-2009-03-01T15:32:47.392860Z
-8922
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6341
-
 WMSDescribeLayer
 dir
 
-WFSCapabilities
-dir
-
-OSM.js
+WMSGetFeatureInfo.js
 file
 
 
 
 
 2009-09-10T13:36:33.000000Z
-e3f856050566795cb88d1e2c77104050
-2008-04-09T16:52:08.552548Z
-6833
-tschaub
+b8201d06957656fdedcc7eed8527f20c
+2009-06-12T20:06:12.303881Z
+9475
+crschmidt
 has-props
 
 
@@ -595,7 +518,7 @@ has-props
 
 
 
-15556
+9009
 
 GPX.js
 file
@@ -631,16 +554,16 @@ crschmidt
 
 6116
 
-WMSGetFeatureInfo.js
+GeoRSS.js
 file
 
 
 
 
 2009-09-10T13:36:33.000000Z
-b8201d06957656fdedcc7eed8527f20c
-2009-06-12T20:06:12.303881Z
-9475
+72ddcf9b0de35bc854274fed0b230ed8
+2009-03-14T17:05:38.325295Z
+9049
 crschmidt
 has-props
 
@@ -663,7 +586,192 @@ has-props
 
 
 
-9009
+15414
+
+CSWGetRecords
+dir
+
+WMSCapabilities
+dir
+
+WKT.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+85c9c0fe9963c30849d0917a5a677973
+2008-07-31T04:44:25.186772Z
+7627
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13575
+
+SLD
+dir
+
+JSON.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+f2e86dbdf5fac73518fbb3cf07ce33b5
+2009-04-03T23:58:16.253825Z
+9182
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12833
+
+ArcXML
+dir
+
+CSWGetDomain.js
+file
+
+
+
+
+2009-10-06T15:36:10.000000Z
+b99ee9d1cb78892c7e6c5e95e064e5a9
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+964
+
+WMC.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+76d5960b5ff847ec8f93d9f9b5762d36
+2009-03-01T15:32:47.392860Z
+8922
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6341
+
+OSM.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+e3f856050566795cb88d1e2c77104050
+2008-04-09T16:52:08.552548Z
+6833
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15556
+
+WFSCapabilities
+dir
 
 WFS.js
 file
@@ -732,38 +840,4 @@ has-props
 
 
 31319
-
-GeoRSS.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-72ddcf9b0de35bc854274fed0b230ed8
-2009-03-14T17:05:38.325295Z
-9049
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-15414
 

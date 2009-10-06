@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/!svn/ver/9636/trunk/openlayers/lib/OpenLayers/Protocol
+/!svn/ver/9702/trunk/openlayers/lib/OpenLayers/Protocol
 END
 HTTP.js
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/!svn/ver/9246/trunk/openlayers/lib/OpenLayers/Protocol/HTTP.js
+/!svn/ver/9702/trunk/openlayers/lib/OpenLayers/Protocol/HTTP.js
 END
 SQL.js
 K 25

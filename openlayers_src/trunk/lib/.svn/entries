@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib
 http://svn.openlayers.org
 
 
 
-2009-09-21T18:22:40.376275Z
-9686
-crschmidt
+2009-10-05T22:36:51.241324Z
+9707
+tschaub
 
 
 
@@ -44,11 +44,11 @@ file
 
 
 
-2009-09-10T13:36:34.000000Z
-e26d6eecd472bd525939186111663099
-2009-04-20T15:24:35.815189Z
-9309
-crschmidt
+2009-10-06T15:36:10.000000Z
+077d4dadb38630cd0e1d199b14303a5f
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
 has-props
 
 
@@ -70,5 +70,5 @@ has-props
 
 
 
-12294
+12506
 

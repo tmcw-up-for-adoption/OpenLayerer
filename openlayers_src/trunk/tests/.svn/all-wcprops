@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 37
-/!svn/ver/9676/trunk/openlayers/tests
+/!svn/ver/9706/trunk/openlayers/tests
 END
 Map.html
 K 25
@@ -117,17 +117,17 @@ svn:wc:ra_dav:version-url
 V 75
 /!svn/ver/4225/trunk/openlayers/tests/data_Layer_Text_textfile_overflow.txt
 END
-Projection.html
-K 25
-svn:wc:ra_dav:version-url
-V 53
-/!svn/ver/6724/trunk/openlayers/tests/Projection.html
-END
 Layer.html
 K 25
 svn:wc:ra_dav:version-url
 V 48
 /!svn/ver/9616/trunk/openlayers/tests/Layer.html
+END
+Projection.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/6724/trunk/openlayers/tests/Projection.html
 END
 Util.html
 K 25
@@ -135,17 +135,17 @@ svn:wc:ra_dav:version-url
 V 47
 /!svn/ver/9573/trunk/openlayers/tests/Util.html
 END
-Marker.html
-K 25
-svn:wc:ra_dav:version-url
-V 49
-/!svn/ver/8091/trunk/openlayers/tests/Marker.html
-END
 OpenLayers.html
 K 25
 svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/9086/trunk/openlayers/tests/OpenLayers.html
+END
+Marker.html
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/8091/trunk/openlayers/tests/Marker.html
 END
 Tween.html
 K 25
@@ -159,23 +159,11 @@ svn:wc:ra_dav:version-url
 V 48
 /!svn/ver/7983/trunk/openlayers/tests/geom_eq.js
 END
-data_Layer_Text_textfile.txt
+Icon.html
 K 25
 svn:wc:ra_dav:version-url
-V 66
-/!svn/ver/1424/trunk/openlayers/tests/data_Layer_Text_textfile.txt
-END
-atom-1.0.xml
-K 25
-svn:wc:ra_dav:version-url
-V 50
-/!svn/ver/2978/trunk/openlayers/tests/atom-1.0.xml
-END
-Format.html
-K 25
-svn:wc:ra_dav:version-url
-V 49
-/!svn/ver/7982/trunk/openlayers/tests/Format.html
+V 47
+/!svn/ver/8091/trunk/openlayers/tests/Icon.html
 END
 Request.html
 K 25
@@ -183,11 +171,23 @@ svn:wc:ra_dav:version-url
 V 50
 /!svn/ver/9586/trunk/openlayers/tests/Request.html
 END
-Icon.html
+Format.html
 K 25
 svn:wc:ra_dav:version-url
-V 47
-/!svn/ver/8091/trunk/openlayers/tests/Icon.html
+V 49
+/!svn/ver/7982/trunk/openlayers/tests/Format.html
+END
+atom-1.0.xml
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/2978/trunk/openlayers/tests/atom-1.0.xml
+END
+data_Layer_Text_textfile.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/1424/trunk/openlayers/tests/data_Layer_Text_textfile.txt
 END
 Geometry.html
 K 25
@@ -223,7 +223,7 @@ Protocol.html
 K 25
 svn:wc:ra_dav:version-url
 V 51
-/!svn/ver/7708/trunk/openlayers/tests/Protocol.html
+/!svn/ver/9702/trunk/openlayers/tests/Protocol.html
 END
 Console.html
 K 25
@@ -271,5 +271,5 @@ list-tests.html
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/!svn/ver/9271/trunk/openlayers/tests/list-tests.html
+/!svn/ver/9699/trunk/openlayers/tests/list-tests.html
 END

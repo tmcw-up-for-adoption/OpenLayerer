@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/examples
 http://svn.openlayers.org
 
 
 
-2009-09-17T12:05:38.592113Z
-9671
-pagameba
+2009-10-06T08:12:04.940202Z
+9708
+ahocevar
 
 
 
@@ -570,40 +570,6 @@ has-props
 
 2609
 
-kamap.txt
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-448b20fbfac60a0c3959d4a9d5142c9c
-2006-09-09T15:46:17.466775Z
-1424
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-21637
-
 georss-markers.html
 file
 
@@ -637,6 +603,40 @@ has-props
 
 
 1479
+
+kamap.txt
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+448b20fbfac60a0c3959d4a9d5142c9c
+2006-09-09T15:46:17.466775Z
+1424
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21637
 
 google-reproject.html
 file
@@ -1012,40 +1012,6 @@ has-props
 
 3518
 
-marker-shadow.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-d7197ecfa65b1c89390e79cde1c63d8a
-2008-11-03T19:14:55.632079Z
-8251
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5471
-
 events.html
 file
 
@@ -1079,6 +1045,40 @@ tschaub
 
 
 5278
+
+marker-shadow.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+d7197ecfa65b1c89390e79cde1c63d8a
+2008-11-03T19:14:55.632079Z
+8251
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5471
 
 overviewmap.html
 file
@@ -2205,40 +2205,6 @@ ahocevar
 
 2047
 
-KMLParser.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-51a2429a51e7bb83374e24749d444c88
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1626
-
 protocol-gears.html
 file
 
@@ -2272,6 +2238,40 @@ tschaub
 
 
 8613
+
+KMLParser.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+51a2429a51e7bb83374e24749d444c88
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1626
 
 ve-novibrate.html
 file
@@ -2341,40 +2341,6 @@ has-props
 
 1672
 
-urban.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-f1356847a3828a3d161e91e6d3cd68de
-2008-05-08T08:15:07.746940Z
-7095
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1414
-
 getfeatureinfo.html
 file
 
@@ -2408,6 +2374,40 @@ has-props
 
 
 2391
+
+urban.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+f1356847a3828a3d161e91e6d3cd68de
+2008-05-08T08:15:07.746940Z
+7095
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1414
 
 osm-layer.html
 file
@@ -2443,40 +2443,6 @@ has-props
 
 5827
 
-vector-features-with-text.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-5c3491b2061865168309b0c0f3385f76
-2009-04-13T08:22:55.673505Z
-9276
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4516
-
 ordering.html
 file
 
@@ -2510,6 +2476,40 @@ ahocevar
 
 
 9690
+
+vector-features-with-text.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+5c3491b2061865168309b0c0f3385f76
+2009-04-13T08:22:55.673505Z
+9276
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4516
 
 arcims-thematic.html
 file
@@ -2579,18 +2579,17 @@ tschaub
 
 5747
 
-boxes.html
+pan-zoom-panels.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-a51d4f499565046862358fb570db2a0c
-2008-05-08T08:15:07.746940Z
-7095
+f357057d8cd639f86a43e364846ee978
+2009-03-12T20:04:34.462919Z
+9038
 tschaub
-has-props
 
 
 
@@ -2611,7 +2610,8 @@ has-props
 
 
 
-1850
+
+1835
 
 editingtoolbar-outside.html
 file
@@ -2647,17 +2647,18 @@ has-props
 
 1818
 
-pan-zoom-panels.html
+boxes.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-f357057d8cd639f86a43e364846ee978
-2009-03-12T20:04:34.462919Z
-9038
+a51d4f499565046862358fb570db2a0c
+2008-05-08T08:15:07.746940Z
+7095
 tschaub
+has-props
 
 
 
@@ -2678,8 +2679,7 @@ tschaub
 
 
 
-
-1835
+1850
 
 intersects.html
 file
@@ -2783,40 +2783,6 @@ tschaub
 
 2697
 
-example.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-cd244e6c25448b13fb2594f7db82d858
-2009-08-25T20:05:18.640772Z
-9631
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1896
-
 mapguide.html
 file
 
@@ -2851,17 +2817,17 @@ crschmidt
 
 5672
 
-kml-layer.html
+example.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-7b90c3c26485037af3c915c0214ca283
-2009-02-21T13:43:21.257792Z
-8882
-crschmidt
+cd244e6c25448b13fb2594f7db82d858
+2009-08-25T20:05:18.640772Z
+9631
+tschaub
 has-props
 
 
@@ -2883,7 +2849,7 @@ has-props
 
 
 
-1371
+1896
 
 accessible.html
 file
@@ -2919,17 +2885,18 @@ has-props
 
 5071
 
-navigation-history.html
+kml-layer.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-094f8158fec921c956cc7d0f0c81b180
-2008-06-23T06:56:58.318997Z
-7422
-fredj
+7b90c3c26485037af3c915c0214ca283
+2009-02-21T13:43:21.257792Z
+8882
+crschmidt
+has-props
 
 
 
@@ -2950,8 +2917,7 @@ fredj
 
 
 
-
-1780
+1371
 
 outOfRangeMarkers.html
 file
@@ -2986,6 +2952,40 @@ has-props
 
 
 2515
+
+navigation-history.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+094f8158fec921c956cc7d0f0c81b180
+2008-06-23T06:56:58.318997Z
+7422
+fredj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1780
 
 wfs-reprojection.html
 file
@@ -3089,48 +3089,14 @@ has-props
 
 2053
 
-wfs-protocol-transactions.html
+markers.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-11843fdd26c29f18165b1b3358572252
-2009-03-11T13:51:10.930182Z
-9009
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7586
-
-fractional-zoom.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-7e8c3daf44cc7d78ac771cd5e01a4d6a
+a4eac8068b3b97bed0e6c06a5698dad1
 2008-05-08T08:15:07.746940Z
 7095
 tschaub
@@ -3155,7 +3121,7 @@ has-props
 
 
 
-2102
+2294
 
 mapserver.html
 file
@@ -3191,14 +3157,14 @@ has-props
 
 1268
 
-markers.html
+fractional-zoom.html
 file
 
 
 
 
 2009-09-10T13:36:34.000000Z
-a4eac8068b3b97bed0e6c06a5698dad1
+7e8c3daf44cc7d78ac771cd5e01a4d6a
 2008-05-08T08:15:07.746940Z
 7095
 tschaub
@@ -3223,7 +3189,41 @@ has-props
 
 
 
-2294
+2102
+
+wfs-protocol-transactions.html
+file
+
+
+
+
+2009-10-06T15:36:10.000000Z
+7db54bef7ba8ed3489de4a30c79d8579
+2009-10-06T08:12:04.940202Z
+9708
+ahocevar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7584
 
 mvs.html
 file
@@ -3775,40 +3775,6 @@ has-props
 
 5794
 
-all-overlays.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-0bb2816f96180e4065b4a0b489fd397b
-2009-04-06T18:29:48.409143Z
-9211
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2725
-
 navtoolbar-alwaysZoom.html
 file
 
@@ -3842,6 +3808,40 @@ crschmidt
 
 
 2543
+
+all-overlays.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+0bb2816f96180e4065b4a0b489fd397b
+2009-04-06T18:29:48.409143Z
+9211
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2725
 
 navigation-control.html
 file
@@ -4047,40 +4047,6 @@ has-props
 
 3170
 
-georss.xml
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-ebff1c38c2c04df24c5042a01df3012c
-2007-12-08T14:21:53.115500Z
-5362
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-27114
-
 stylemap.html
 file
 
@@ -4114,6 +4080,40 @@ tschaub
 
 
 3778
+
+georss.xml
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+ebff1c38c2c04df24c5042a01df3012c
+2007-12-08T14:21:53.115500Z
+5362
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27114
 
 zoomLevels.html
 file
@@ -4183,40 +4183,6 @@ has-props
 
 2401
 
-strategy-paging.html
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-42f62a53459fd70d2c6b162440a6206e
-2009-03-11T14:14:28.755745Z
-9010
-tschaub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3703
-
 yelp-georss.xml
 file
 
@@ -4250,6 +4216,40 @@ crschmidt
 
 
 10746
+
+strategy-paging.html
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+42f62a53459fd70d2c6b162440a6206e
+2009-03-11T14:14:28.755745Z
+9010
+tschaub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3703
 
 data
 dir
@@ -5388,11 +5388,11 @@ file
 
 
 
-2009-09-10T13:36:35.000000Z
-ed7efefd712f653d7be7860a33e5da35
-2008-08-01T15:34:50.262149Z
-7660
-euzuro
+2009-10-06T15:36:10.000000Z
+76e5bbffaa9ecf2f19f60ec606ec875c
+2009-10-01T20:08:11.791749Z
+9698
+ahocevar
 has-props
 
 
@@ -5414,5 +5414,5 @@ has-props
 
 
 
-2379
+2219
 

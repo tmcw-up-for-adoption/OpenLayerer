@@ -1,14 +1,14 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/tests/Format
 http://svn.openlayers.org
 
 
 
-2009-09-11T22:48:56.540395Z
-9664
+2009-10-05T22:34:16.389575Z
+9706
 tschaub
 
 
@@ -27,9 +27,6 @@ tschaub
 dc9f47b5-9b13-0410-9fdd-eb0c1a62fdaf
 
 GML
-dir
-
-WMSCapabilities
 dir
 
 WFSDescribeFeatureType.html
@@ -66,8 +63,39 @@ ahocevar
 
 23738
 
-SLD
-dir
+CSWGetRecords.html
+file
+
+
+
+
+2009-10-06T15:36:09.000000Z
+93359ed29b9f75b03ac1c3f1f3649325
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+683
 
 GML.html
 file
@@ -140,6 +168,9 @@ tschaub
 
 402
 
+CSWGetDomain
+dir
+
 Filter
 dir
 
@@ -178,9 +209,6 @@ has-props
 1836
 
 WMC
-dir
-
-ArcXML
 dir
 
 WFST.html
@@ -353,6 +381,222 @@ crschmidt
 
 13278
 
+WMSGetFeatureInfo.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+804ea79aea57fb3544bd3c6154c541cc
+2009-04-03T16:42:26.595901Z
+9178
+ahocevar
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14183
+
+GPX.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+6566abd5282441fdc9458f8c2d3d4fb3
+2008-12-21T14:43:58.017329Z
+8531
+crschmidt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3225
+
+GeoRSS.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+b1ee1e1ed9d98f35a6f6b97d4c8fa2eb
+2009-03-14T17:05:38.325295Z
+9049
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13639
+
+WKT.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+1c3ff4e54ad68721082d37ebbc8edd7e
+2009-03-11T22:45:32.107092Z
+9022
+sderle
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10758
+
+JSON.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+d6ae3905af2b31456ba3c7284a1a7c67
+2009-03-01T16:37:07.105792Z
+8924
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1706
+
+CSWGetRecords
+dir
+
+WMSCapabilities
+dir
+
+SLD
+dir
+
+ArcXML
+dir
+
+CSWGetDomain.html
+file
+
+
+
+
+2009-10-06T15:36:09.000000Z
+92a3dd56b97da07ae28fb1a9c179daf3
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+679
+
 WMC.html
 file
 
@@ -420,74 +664,6 @@ has-props
 
 
 4819
-
-GPX.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-6566abd5282441fdc9458f8c2d3d4fb3
-2008-12-21T14:43:58.017329Z
-8531
-crschmidt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3225
-
-WMSGetFeatureInfo.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-804ea79aea57fb3544bd3c6154c541cc
-2009-04-03T16:42:26.595901Z
-9178
-ahocevar
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-14183
 
 WFS.html
 file
@@ -557,74 +733,6 @@ has-props
 
 33726
 
-GeoRSS.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-b1ee1e1ed9d98f35a6f6b97d4c8fa2eb
-2009-03-14T17:05:38.325295Z
-9049
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-13639
-
-GeoJSON.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-894194c314179b5de1f1feec524aec3b
-2009-01-05T14:23:01.878672Z
-8582
-elemoine
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-23836
-
 WMSDescribeLayer.html
 file
 
@@ -659,17 +767,17 @@ has-props
 
 1153
 
-WKT.html
+GeoJSON.html
 file
 
 
 
 
-2009-09-10T13:36:32.000000Z
-1c3ff4e54ad68721082d37ebbc8edd7e
-2009-03-11T22:45:32.107092Z
-9022
-sderle
+2009-10-06T15:36:09.000000Z
+488f93b748b39914bf2c675627b5e465
+2009-10-05T09:21:07.069402Z
+9700
+elemoine
 has-props
 
 
@@ -691,44 +799,10 @@ has-props
 
 
 
-10758
+24572
 
 WFSCapabilities
 dir
-
-JSON.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-d6ae3905af2b31456ba3c7284a1a7c67
-2009-03-01T16:37:07.105792Z
-8924
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1706
 
 WFSCapabilities.html
 file

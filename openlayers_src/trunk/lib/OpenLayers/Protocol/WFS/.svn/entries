@@ -1,14 +1,14 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Protocol/WFS
 http://svn.openlayers.org
 
 
 
-2009-09-02T06:17:19.035374Z
-9636
+2009-10-05T12:14:37.587276Z
+9702
 elemoine
 
 
@@ -100,10 +100,10 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-d120e156b3b8fd58705bf1ecd1ddf548
-2009-09-02T06:17:19.035374Z
-9636
+2009-10-06T15:36:10.000000Z
+2443bb49fc5403671b7a926ae0097096
+2009-10-05T12:14:37.587276Z
+9702
 elemoine
 
 
@@ -126,5 +126,5 @@ elemoine
 
 
 
-11221
+11288
 

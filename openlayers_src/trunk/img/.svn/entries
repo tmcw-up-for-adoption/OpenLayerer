@@ -1,7 +1,7 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/img
 http://svn.openlayers.org
 
@@ -332,40 +332,6 @@ has-props
 
 3875
 
-west-mini.png
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-331569dd08b470fa901e9f652369a3af
-2006-05-12T19:35:22.844217Z
-2
-sderle
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-453
-
 panning-hand-on.png
 file
 
@@ -399,6 +365,40 @@ has-props
 
 
 3977
+
+west-mini.png
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+331569dd08b470fa901e9f652369a3af
+2006-05-12T19:35:22.844217Z
+2
+sderle
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+453
 
 measuring-stick-off.png
 file
@@ -434,40 +434,6 @@ has-props
 
 3343
 
-marker-green.png
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-2a21d182e5c8c7183578370685f2a31a
-2006-10-02T05:03:44.304854Z
-1520
-sderle
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-967
-
 measuring-stick-on.png
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 3816
+
+marker-green.png
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+2a21d182e5c8c7183578370685f2a31a
+2006-10-02T05:03:44.304854Z
+1520
+sderle
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+967
 
 cloud-popup-relative.png
 file

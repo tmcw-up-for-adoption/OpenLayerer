@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/tests
 http://svn.openlayers.org
 
 
 
-2009-09-17T17:17:11.347659Z
-9676
-pagameba
+2009-10-05T22:34:16.389575Z
+9706
+tschaub
 
 
 
@@ -25,40 +25,6 @@ pagameba
 
 
 dc9f47b5-9b13-0410-9fdd-eb0c1a62fdaf
-
-owls.xml
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-98066aba6255d428e6b8944e050d514d
-2007-09-13T01:23:06.261751Z
-4252
-euzuro
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5418
 
 Control.html
 file
@@ -94,6 +60,40 @@ has-props
 
 3655
 
+owls.xml
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+98066aba6255d428e6b8944e050d514d
+2007-09-13T01:23:06.261751Z
+4252
+euzuro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5418
+
 Ajax.html
 file
 
@@ -128,6 +128,9 @@ has-props
 
 934
 
+Request
+dir
+
 Filter.html
 file
 
@@ -161,9 +164,6 @@ tschaub
 
 
 583
-
-Request
-dir
 
 Tile.html
 file
@@ -406,9 +406,6 @@ tschaub
 
 3756
 
-Geometry
-dir
-
 Request.html
 file
 
@@ -442,6 +439,9 @@ elemoine
 
 
 12282
+
+Geometry
+dir
 
 Icon.html
 file
@@ -517,10 +517,10 @@ file
 
 
 
-2009-09-10T13:36:32.000000Z
-e3ad0c9f6d25eb4a93bf49b37725e73a
-2008-08-05T13:59:12.544656Z
-7708
+2009-10-06T15:36:10.000000Z
+20fe4a31e351c0662a293fa3bad3b118
+2009-10-05T12:14:37.587276Z
+9702
 elemoine
 
 
@@ -543,7 +543,7 @@ elemoine
 
 
 
-916
+1721
 
 Console.html
 file
@@ -835,9 +835,6 @@ dir
 BaseTypes
 dir
 
-Strategy
-dir
-
 BaseTypes.html
 file
 
@@ -871,6 +868,9 @@ has-props
 
 
 13406
+
+Strategy
+dir
 
 Popup
 dir
@@ -909,9 +909,6 @@ has-props
 
 9259
 
-data
-dir
-
 Renderer.html
 file
 
@@ -945,6 +942,9 @@ has-props
 
 
 2418
+
+data
+dir
 
 auto-tests.html
 file
@@ -1082,9 +1082,6 @@ has-props
 
 20294
 
-Control
-dir
-
 Util.html
 file
 
@@ -1119,42 +1116,11 @@ has-props
 
 39201
 
-selenium
+Control
 dir
 
-OpenLayers.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-8cd34675b69cf22c1ed29753eafd85c4
-2009-03-18T15:57:41.415622Z
-9086
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-891
+selenium
+dir
 
 Marker.html
 file
@@ -1190,6 +1156,40 @@ has-props
 
 5267
 
+OpenLayers.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+8cd34675b69cf22c1ed29753eafd85c4
+2009-03-18T15:57:41.415622Z
+9086
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+891
+
 Tween.html
 file
 
@@ -1223,77 +1223,6 @@ has-props
 
 
 2107
-
-Feature
-dir
-
-Format.html
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-5da72703b80b16e64d11c4f27935e068
-2008-09-08T21:31:39.795213Z
-7982
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-704
-
-atom-1.0.xml
-file
-
-
-
-
-2009-09-10T13:36:32.000000Z
-cb36d21de1a1f56c7ab5ac98ba35a0aa
-2007-04-02T16:46:34.586246Z
-2978
-sderle
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1132
 
 data_Layer_Text_textfile.txt
 file
@@ -1329,6 +1258,77 @@ has-props
 
 120
 
+atom-1.0.xml
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+cb36d21de1a1f56c7ab5ac98ba35a0aa
+2007-04-02T16:46:34.586246Z
+2978
+sderle
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1132
+
+Format.html
+file
+
+
+
+
+2009-09-10T13:36:32.000000Z
+5da72703b80b16e64d11c4f27935e068
+2008-09-08T21:31:39.795213Z
+7982
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+704
+
+Feature
+dir
+
 Feature.html
 file
 
@@ -1362,9 +1362,6 @@ has-props
 
 
 7774
-
-speed
-dir
 
 xml_eq.js
 file
@@ -1400,7 +1397,7 @@ tschaub
 
 11039
 
-Protocol
+speed
 dir
 
 throws.js
@@ -1436,6 +1433,9 @@ has-props
 
 
 2664
+
+Protocol
+dir
 
 Style.html
 file
@@ -1585,11 +1585,11 @@ file
 
 
 
-2009-09-10T13:36:32.000000Z
-a981142d8c9cb5a1a1ea9a1c66c8fc5d
-2009-04-12T15:40:46.591309Z
-9271
-crschmidt
+2009-10-06T15:36:10.000000Z
+99b875454ce2d19270adba2bdd0bf3e4
+2009-10-05T08:15:48.877191Z
+9699
+elemoine
 has-props
 
 
@@ -1611,5 +1611,5 @@ has-props
 
 
 
-5580
+5748
 

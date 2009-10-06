@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/!svn/ver/9584/trunk/openlayers/lib/OpenLayers/Format/SLD
+/!svn/ver/9706/trunk/openlayers/lib/OpenLayers/Format/SLD
 END
 v1_0_0.js
 K 25
@@ -13,5 +13,5 @@ v1.js
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/!svn/ver/9584/trunk/openlayers/lib/OpenLayers/Format/SLD/v1.js
+/!svn/ver/9706/trunk/openlayers/lib/OpenLayers/Format/SLD/v1.js
 END

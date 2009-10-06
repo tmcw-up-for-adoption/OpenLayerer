@@ -49,6 +49,12 @@ def all_strategies(file_path):
 def all_protocols(file_path):
   return re.match("OpenLayers/Protocol/\w+\.js", file_path) > -1
 
+def all_popups(file_path):
+  return re.match("OpenLayers/Popup/\w+\.js", file_path) > -1
+
+def all_filters(file_path):
+  return re.match("OpenLayers/Filter/\w+\.js", file_path) > -1
+
 def filename_to_sourcefile(file_path):
   content = open('openlayers_src/trunk/lib/' + file_path, "U").read() # TODO: Ensure end of line @ EOF?
   return mergejs.SourceFile(file_path, content) # TODO: Chop path?
@@ -59,28 +65,43 @@ class MainHandler(webapp.RequestHandler):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
     release_28 = mergejs.scanjs('openlayers_src/release-2.8/lib')
     trunk = mergejs.scanjs('openlayers_src/trunk/lib')
-    trunk = {
-        'layer':    { 'name': 'Layer Types',
+    trunk = [
+        { 'type': 'layer', 'name': 'Layer Types',
           'options': map(filename_to_sourcefile, filter(all_layers, trunk))},
-        'control':  { 'name': 'Controls',
+        { 'type': 'control', 'name': 'Controls',
           'options': map(filename_to_sourcefile, filter(all_controls, trunk))},
-        'language': { 'name': 'Languages',
+        { 'type': 'language', 'name': 'Languages',
           'options': map(filename_to_sourcefile, filter(all_languages, trunk))},
-        'format':   { 'name': 'Formats',
+        { 'type': 'format', 'name': 'Formats',
           'options': map(filename_to_sourcefile, filter(all_formats, trunk))},
-        'strategy':{ 'name': 'Strategies',
+        { 'type': 'strategy', 'name': 'Strategies',
           'options':  map(filename_to_sourcefile, filter(all_strategies, trunk))},
-        'protocol': { 'name': 'Protocols',
+        { 'type': 'protocol', 'name': 'Protocols',
           'options': map(filename_to_sourcefile, filter(all_protocols, trunk))},
-        }
-    release_28 = {
-        'layers': filter(all_layers, release_28),
-        'controls': filter(all_controls, release_28),
-        'languages': filter(all_languages, release_28),
-        'formats': filter(all_formats, release_28),
-        'strategies': filter(all_strategies, release_28),
-        'protocols': filter(all_protocols, release_28),
-        }
+        { 'type': 'popup', 'name': 'Popups',
+          'options': map(filename_to_sourcefile, filter(all_popups, trunk))},
+        { 'type': 'filter', 'name': 'Filters',
+          'options': map(filename_to_sourcefile, filter(all_filters, trunk))},
+        ]
+    release_28 = [
+        { 'type': 'layer', 'name': 'Layer Types',
+          'options': map(filename_to_sourcefile, filter(all_layers, release_28))},
+        { 'type': 'control', 'name': 'Controls',
+          'options': map(filename_to_sourcefile, filter(all_controls, release_28))},
+        { 'type': 'language', 'name': 'Languages',
+          'options': map(filename_to_sourcefile, filter(all_languages, release_28))},
+        { 'type': 'format', 'name': 'Formats',
+          'options': map(filename_to_sourcefile, filter(all_formats, release_28))},
+        { 'type': 'strategy', 'name': 'Strategies',
+          'options':  map(filename_to_sourcefile, filter(all_strategies, release_28))},
+        { 'type': 'protocol', 'name': 'Protocols',
+          'options': map(filename_to_sourcefile, filter(all_protocols, release_28))},
+        { 'type': 'popup', 'name': 'Popups',
+          'options': map(filename_to_sourcefile, filter(all_popups, release_28))},
+        { 'type': 'filter', 'name': 'Filters',
+          'options': map(filename_to_sourcefile, filter(all_filters, release_28))},
+        ]
+
     template_values = {
         'trunk': trunk, 'release_28': release_28}
     self.response.out.write(template.render(path, template_values))
@@ -94,11 +115,14 @@ class OpenLayerer(webapp.RequestHandler):
     formats = self.request.get_all('format')
     strategies = self.request.get_all('strategy')
     protocols = self.request.get_all('protocol')
+    filters = self.request.get_all('filter')
+    popups = self.request.get_all('popup')
     version = self.request.get('version')
 
 
     forceFirst = first
-    include = controls + layers + languages + strategies + protocols + formats
+    include = controls + layers + languages + strategies \
+        + protocols + formats + popup + filter
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
     try:

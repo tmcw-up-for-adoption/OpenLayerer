@@ -1,7 +1,7 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Lang
 http://svn.openlayers.org
 
@@ -638,14 +638,14 @@ sderle
 
 4529
 
-gl.js
+ar.js
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-882a3404a08c8f0c0788b69bda2f2f40
+d3cf15aed6dd9c98e262e0698ef8622f
 2009-07-31T16:34:04.827397Z
 9604
 sderle
@@ -670,7 +670,7 @@ sderle
 
 
 
-4576
+638
 
 en.js
 file
@@ -706,14 +706,14 @@ crschmidt
 
 4814
 
-ar.js
+gl.js
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-d3cf15aed6dd9c98e262e0698ef8622f
+882a3404a08c8f0c0788b69bda2f2f40
 2009-07-31T16:34:04.827397Z
 9604
 sderle
@@ -738,7 +738,7 @@ sderle
 
 
 
-638
+4576
 
 fr.js
 file
@@ -910,17 +910,17 @@ crschmidt
 
 4872
 
-en-CA.js
+pt.js
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-79c067b1d667cd4ceb609a92578745c4
-2008-02-15T21:15:48.754354Z
-6313
-tschaub
+4e7add804f5ca493ed7b0e287711fca8
+2009-07-31T16:34:04.827397Z
+9604
+sderle
 
 
 
@@ -942,7 +942,7 @@ tschaub
 
 
 
-857
+4117
 
 ca.js
 file
@@ -978,17 +978,17 @@ crschmidt
 
 5060
 
-pt.js
+en-CA.js
 file
 
 
 
 
 2009-09-10T13:36:32.000000Z
-4e7add804f5ca493ed7b0e287711fca8
-2009-07-31T16:34:04.827397Z
-9604
-sderle
+79c067b1d667cd4ceb609a92578745c4
+2008-02-15T21:15:48.754354Z
+6313
+tschaub
 
 
 
@@ -1010,7 +1010,7 @@ sderle
 
 
 
-4117
+857
 
 ksh.js
 file

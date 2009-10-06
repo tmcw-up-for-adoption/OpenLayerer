@@ -1,14 +1,14 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Format/WMC
 http://svn.openlayers.org
 
 
 
-2009-08-07T15:59:43.130988Z
-9614
+2009-10-05T14:30:00.203378Z
+9703
 bartvde
 
 
@@ -66,10 +66,10 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-cc3b0afb33d904ab19d7c4e51c2bdc1c
-2009-08-07T15:59:43.130988Z
-9614
+2009-10-06T15:36:10.000000Z
+2cd28354de87bbe9e089a31840a87ac9
+2009-10-05T14:30:00.203378Z
+9703
 bartvde
 has-props
 
@@ -92,7 +92,7 @@ has-props
 
 
 
-3912
+3913
 
 v1.js
 file
@@ -100,10 +100,10 @@ file
 
 
 
-2009-09-10T13:36:33.000000Z
-b2c616bc069a943d83b47a30f9438413
-2009-08-07T15:59:43.130988Z
-9614
+2009-10-06T15:36:10.000000Z
+570e94a4412e7a17897c5e7e5b525c43
+2009-10-05T14:30:00.203378Z
+9703
 bartvde
 has-props
 

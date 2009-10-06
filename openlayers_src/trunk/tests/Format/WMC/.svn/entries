@@ -1,14 +1,14 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/tests/Format/WMC
 http://svn.openlayers.org
 
 
 
-2009-08-07T15:59:43.130988Z
-9614
+2009-10-05T14:30:00.203378Z
+9703
 bartvde
 
 
@@ -32,10 +32,10 @@ file
 
 
 
-2009-09-10T13:36:31.000000Z
-4fa9edb9d8848c6248efec56ee3bc2ad
-2009-08-07T15:59:43.130988Z
-9614
+2009-10-06T15:36:09.000000Z
+30b8ca260d35ce09b315688957c4953c
+2009-10-05T14:30:00.203378Z
+9703
 bartvde
 has-props
 

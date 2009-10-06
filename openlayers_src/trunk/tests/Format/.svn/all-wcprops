@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/!svn/ver/9664/trunk/openlayers/tests/Format
+/!svn/ver/9706/trunk/openlayers/tests/Format
 END
 WFSDescribeFeatureType.html
 K 25
 svn:wc:ra_dav:version-url
 V 72
 /!svn/ver/9106/trunk/openlayers/tests/Format/WFSDescribeFeatureType.html
+END
+CSWGetRecords.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/9699/trunk/openlayers/tests/Format/CSWGetRecords.html
 END
 GML.html
 K 25
@@ -27,17 +33,17 @@ svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/6719/trunk/openlayers/tests/Format/SLD.html
 END
-WFST.html
-K 25
-svn:wc:ra_dav:version-url
-V 54
-/!svn/ver/8868/trunk/openlayers/tests/Format/WFST.html
-END
 KML.html
 K 25
 svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/9089/trunk/openlayers/tests/Format/KML.html
+END
+WFST.html
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/8868/trunk/openlayers/tests/Format/WFST.html
 END
 Text.html
 K 25
@@ -45,17 +51,17 @@ svn:wc:ra_dav:version-url
 V 54
 /!svn/ver/9286/trunk/openlayers/tests/Format/Text.html
 END
+CSWGetDomain.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/9699/trunk/openlayers/tests/Format/CSWGetDomain.html
+END
 Filter.html
 K 25
 svn:wc:ra_dav:version-url
 V 56
 /!svn/ver/7651/trunk/openlayers/tests/Format/Filter.html
-END
-ArcXML.html
-K 25
-svn:wc:ra_dav:version-url
-V 56
-/!svn/ver/9249/trunk/openlayers/tests/Format/ArcXML.html
 END
 WMC.html
 K 25
@@ -63,11 +69,17 @@ svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/7668/trunk/openlayers/tests/Format/WMC.html
 END
-OSM.html
+ArcXML.html
 K 25
 svn:wc:ra_dav:version-url
-V 53
-/!svn/ver/6719/trunk/openlayers/tests/Format/OSM.html
+V 56
+/!svn/ver/9249/trunk/openlayers/tests/Format/ArcXML.html
+END
+WMSGetFeatureInfo.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/9178/trunk/openlayers/tests/Format/WMSGetFeatureInfo.html
 END
 GPX.html
 K 25
@@ -75,11 +87,11 @@ svn:wc:ra_dav:version-url
 V 53
 /!svn/ver/8531/trunk/openlayers/tests/Format/GPX.html
 END
-WMSGetFeatureInfo.html
+OSM.html
 K 25
 svn:wc:ra_dav:version-url
-V 67
-/!svn/ver/9178/trunk/openlayers/tests/Format/WMSGetFeatureInfo.html
+V 53
+/!svn/ver/6719/trunk/openlayers/tests/Format/OSM.html
 END
 WFS.html
 K 25
@@ -103,7 +115,7 @@ GeoJSON.html
 K 25
 svn:wc:ra_dav:version-url
 V 57
-/!svn/ver/8582/trunk/openlayers/tests/Format/GeoJSON.html
+/!svn/ver/9700/trunk/openlayers/tests/Format/GeoJSON.html
 END
 WMSDescribeLayer.html
 K 25

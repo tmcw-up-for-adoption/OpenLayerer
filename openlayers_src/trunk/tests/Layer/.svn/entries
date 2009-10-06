@@ -1,7 +1,7 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/tests/Layer
 http://svn.openlayers.org
 
@@ -536,40 +536,6 @@ crschmidt
 
 7143
 
-GeoRSS.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-08097872516612172bf3901ae25d455e
-2008-06-19T22:08:10.736353Z
-7387
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10409
-
 Vector.html
 file
 
@@ -603,6 +569,40 @@ has-props
 
 
 24854
+
+GeoRSS.html
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+08097872516612172bf3901ae25d455e
+2008-06-19T22:08:10.736353Z
+7387
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10409
 
 TMS.html
 file
@@ -808,40 +808,6 @@ has-props
 
 3955
 
-FixedZoomLevels.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-9c669f2650f541cb7d98ac0fe10d6547
-2008-03-31T05:31:28.242602Z
-6724
-euzuro
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3799
-
 WrapDateLine.html
 file
 
@@ -876,14 +842,14 @@ has-props
 
 10037
 
-MultiMap.html
+FixedZoomLevels.html
 file
 
 
 
 
 2009-09-10T13:36:31.000000Z
-182861ce22d33ff627014422f4ef2c67
+9c669f2650f541cb7d98ac0fe10d6547
 2008-03-31T05:31:28.242602Z
 6724
 euzuro
@@ -908,75 +874,7 @@ has-props
 
 
 
-3997
-
-HTTPRequest.html
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-7a9774b3aba32e8843a7632f5ad348d8
-2009-08-13T06:31:47.910578Z
-9618
-elemoine
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9975
-
-atom-1.0.xml
-file
-
-
-
-
-2009-09-10T13:36:31.000000Z
-cb36d21de1a1f56c7ab5ac98ba35a0aa
-2008-03-31T02:41:26.124751Z
-6712
-crschmidt
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1132
+3799
 
 data_Layer_Text_textfile.txt
 file
@@ -1012,8 +910,107 @@ has-props
 
 120
 
-Vector
-dir
+atom-1.0.xml
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+cb36d21de1a1f56c7ab5ac98ba35a0aa
+2008-03-31T02:41:26.124751Z
+6712
+crschmidt
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1132
+
+HTTPRequest.html
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+7a9774b3aba32e8843a7632f5ad348d8
+2009-08-13T06:31:47.910578Z
+9618
+elemoine
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9975
+
+MultiMap.html
+file
+
+
+
+
+2009-09-10T13:36:31.000000Z
+182861ce22d33ff627014422f4ef2c67
+2008-03-31T05:31:28.242602Z
+6724
+euzuro
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3997
 
 WFS.html
 file
@@ -1048,6 +1045,9 @@ has-props
 
 
 7535
+
+Vector
+dir
 
 Markers.html
 file

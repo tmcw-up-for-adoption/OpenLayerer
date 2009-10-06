@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 59
-/!svn/ver/9636/trunk/openlayers/lib/OpenLayers/Protocol/WFS
+/!svn/ver/9702/trunk/openlayers/lib/OpenLayers/Protocol/WFS
 END
 v1_0_0.js
 K 25
@@ -19,5 +19,5 @@ v1.js
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/!svn/ver/9636/trunk/openlayers/lib/OpenLayers/Protocol/WFS/v1.js
+/!svn/ver/9702/trunk/openlayers/lib/OpenLayers/Protocol/WFS/v1.js
 END

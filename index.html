@@ -88,13 +88,13 @@
       <form action="/openlayerer" method="POST">
 
           <input type="hidden" name="version" value="trunk" />
-          <!-- trunk -->
-          {% for opts in trunk.items %}
-            <!-- up to the point of control - desc -->
-            {% for o in opts.first.options %}
-              {{ o }}
+          {% for opts in trunk %}
+          <fieldset class="grid_2">
+          <legend>{{ opts.name }}</legend>
+            {% for o in opts.options %}
               {% include "optionlist.html" %}
             {% endfor %}
+          </fieldset>
           {% endfor %}
         <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
       </form>
@@ -108,67 +108,15 @@
       <div class="clearfix" id="version_release_28">
         <h2>Release 2.8</h2>
       <form action="/openlayerer" method="POST">
-        <input type="hidden" name="version" value="trunk" />
-        <fieldset class="grid_2">
-            <legend>Layer Types</legend>
-            {% for layer in release_28.layers %}
-            <div>
-              <input type="checkbox" id="{{ layer }}" name="layer" value="{{ layer.filepath }}" />
-              <label for="{{ layer }}">{{ layer|friendly_name }}</label>
-              <small>[<a href="{{ layer|release_28_link }}">docs</a>]</small>
-            </div>
+        <input type="hidden" name="version" value="release_28" />
+          {% for opts in release_28 %}
+          <fieldset class="grid_2">
+          <legend>{{ opts.name }}</legend>
+            {% for o in opts.options %}
+              {% include "optionlist.html" %}
             {% endfor %}
-        </fieldset>
-        <fieldset class="grid_2">
-          <legend>Controls</legend>
-          {% for control in release_28.controls %}
-          <div>
-            <input type="checkbox" id="{{ control }}" name="control" value="{{ control.filepath }}" />
-            <label for="{{ control }}">{{ control|friendly_name }}</label>
-            <small>[<a href=" {{ control|release_28_link }}">docs</a>]</small>
-          </div>
+          </fieldset>
           {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Languages</legend>
-          {% for language in release_28.languages %}
-          <div>
-            <input type="checkbox" id="{{ language}}" name="language" value="{{ language.filepath }}" />
-            <label for="{{ language }}">{{ language|friendly_name }}</label>
-            <small>[<a href="{{ language|release_28_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Formats</legend>
-          {% for format in release_28.formats %}
-          <div>
-            <input type="checkbox" id="{{ format}}" name="format" value="{{ format.filepath }}" />
-            <label for="{{ format }}">{{ format|friendly_name }}</label>
-            <small>[<a href="{{ format|release_28_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Strategies</legend>
-          {% for strategy in release_28.strategies %}
-          <div>
-            <input type="checkbox" id="{{ strategy}}" name="strategy" value="{{ strategy.filepath }}" />
-            <label for="{{ strategy }}">{{ strategy|friendly_name }}</label>
-            <small>[<a href="{{ strategy|release_28_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
-        <fieldset class="grid_1">
-          <legend>Protocols</legend>
-          {% for protocol in release_28.protocols %}
-          <div>
-            <input type="checkbox" id="{{ protocol}}" name="protocol" value="{{ protocol.filepath }}" />
-            <label for="{{ protocol }}">{{ protocol|friendly_name }}</label>
-            <small>[<a href="{{ protocol|release_28_link }}">docs</a>]</small>
-          </div>
-          {% endfor %}
-        </fieldset>
 
 
         <input class="generate_button" type="submit" value="Generate OpenLayers.js" />

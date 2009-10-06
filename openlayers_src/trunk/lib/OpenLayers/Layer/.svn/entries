@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/lib/OpenLayers/Layer
 http://svn.openlayers.org
 
 
 
-2009-09-21T18:22:40.376275Z
-9686
-crschmidt
+2009-10-01T19:47:31.394230Z
+9696
+ahocevar
 
 
 
@@ -100,44 +100,10 @@ file
 
 
 
-2009-09-24T23:59:31.000000Z
-c1a515ab5580a3276dce2e012371b06a
-2009-09-16T00:15:39.646846Z
-9668
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9209
-
-Google.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-57e9d97489debca1b422b7740385b951
-2009-05-29T07:59:10.156407Z
-9418
+2009-10-06T15:36:10.000000Z
+a9caa75fcf5b1052416cc5431f1da9fb
+2009-10-01T19:47:31.394230Z
+9696
 ahocevar
 has-props
 
@@ -160,7 +126,41 @@ has-props
 
 
 
-17961
+9796
+
+Google.js
+file
+
+
+
+
+2009-10-06T15:36:10.000000Z
+1c5c719c308eaa9c1870e0238c89a536
+2009-10-01T09:39:23.333816Z
+9695
+fredj
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17913
 
 KaMapCache.js
 file
@@ -570,9 +570,6 @@ fredj
 
 5542
 
-WMS
-dir
-
 MapGuide.js
 file
 
@@ -607,39 +604,8 @@ crschmidt
 
 18505
 
-GeoRSS.js
-file
-
-
-
-
-2009-09-10T13:36:33.000000Z
-10286a7ddeac714b7f7b1eef64813ac3
-2008-07-31T04:44:25.186772Z
-7627
-tschaub
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-8551
+WMS
+dir
 
 Vector.js
 file
@@ -674,6 +640,40 @@ has-props
 
 
 28355
+
+GeoRSS.js
+file
+
+
+
+
+2009-09-10T13:36:33.000000Z
+10286a7ddeac714b7f7b1eef64813ac3
+2008-07-31T04:44:25.186772Z
+7627
+tschaub
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8551
 
 TMS.js
 file
@@ -916,40 +916,6 @@ has-props
 Vector
 dir
 
-HTTPRequest.js
-file
-
-
-
-
-2009-09-10T13:36:34.000000Z
-b36bfdd73f9f43c3d3c20c8478321a68
-2009-08-13T06:31:47.910578Z
-9618
-elemoine
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-7828
-
 MultiMap.js
 file
 
@@ -983,6 +949,40 @@ has-props
 
 
 7226
+
+HTTPRequest.js
+file
+
+
+
+
+2009-09-10T13:36:34.000000Z
+b36bfdd73f9f43c3d3c20c8478321a68
+2009-08-13T06:31:47.910578Z
+9618
+elemoine
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7828
 
 MapServer
 dir

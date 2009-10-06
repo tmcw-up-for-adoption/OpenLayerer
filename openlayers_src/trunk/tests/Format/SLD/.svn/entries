@@ -1,15 +1,15 @@
 10
 
 dir
-9689
+9717
 http://svn.openlayers.org/trunk/openlayers/tests/Format/SLD
 http://svn.openlayers.org
 
 
 
-2009-04-06T23:08:08.103809Z
-9223
-ahocevar
+2009-10-05T22:34:16.389575Z
+9706
+tschaub
 
 
 
@@ -32,11 +32,11 @@ file
 
 
 
-2009-09-10T13:36:31.000000Z
-281895d1fdb01d520b12ef75422fb466
-2009-04-06T23:08:08.103809Z
-9223
-ahocevar
+2009-10-06T15:36:09.000000Z
+d52ee494b8c8d0a125b2bd7b953d5358
+2009-10-05T22:34:16.389575Z
+9706
+tschaub
 
 
 
@@ -58,5 +58,5 @@ ahocevar
 
 
 
-17274
+18301
 

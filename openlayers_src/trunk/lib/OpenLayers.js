@@ -238,6 +238,10 @@
             "OpenLayers/Format/SLD/v1.js",
             "OpenLayers/Format/SLD/v1_0_0.js",
             "OpenLayers/Format/SLD/v1.js",
+            "OpenLayers/Format/CSWGetDomain.js",
+            "OpenLayers/Format/CSWGetDomain/v2_0_2.js",
+            "OpenLayers/Format/CSWGetRecords.js",
+            "OpenLayers/Format/CSWGetRecords/v2_0_2.js",
             "OpenLayers/Format/WFST.js",
             "OpenLayers/Format/WFST/v1.js",
             "OpenLayers/Format/WFST/v1_0_0.js",
@@ -296,4 +300,4 @@
 /**
  * Constant: VERSION_NUMBER
  */
-OpenLayers.VERSION_NUMBER="$Revision: 9309 $";
+OpenLayers.VERSION_NUMBER="$Revision: 9699 $";

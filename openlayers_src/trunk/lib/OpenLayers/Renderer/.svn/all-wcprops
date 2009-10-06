@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/!svn/ver/9671/trunk/openlayers/lib/OpenLayers/Renderer
+/!svn/ver/9707/trunk/openlayers/lib/OpenLayers/Renderer
 END
 Canvas.js
 K 25
@@ -25,5 +25,5 @@ SVG.js
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/!svn/ver/9671/trunk/openlayers/lib/OpenLayers/Renderer/SVG.js
+/!svn/ver/9707/trunk/openlayers/lib/OpenLayers/Renderer/SVG.js
 END

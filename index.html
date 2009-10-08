@@ -12,7 +12,6 @@
                 if ($(this).attr('title')) {
                   dependencies = $(this).attr('title').split(',');
                   version = $( $(this).parents('.version')[0] ).attr('id');
-                  console.log(version);
                   for (i in dependencies) {
                     $("#"+version+" input[value='" + dependencies[i] + "']").attr('checked', true);
                   }
@@ -84,6 +83,7 @@
         </div>
         <div class="grid_8">
         <p>OpenLayerer makes custom versions of <a href="http://www.openlayers.org">OpenLayers</a> which include only the parts that you want to use. You can <a href="http://github.com/tmcw/OpenLayerer/tree">fork this project on GitHub.</a></p>
+        <p>OpenLayerer 2 now includes many more options and dependency managment. It is still in beta, so please file issues on <a href="http://github.com/tmcw/OpenLayerer/issues">GitHub</a> for any bugs you find.</p>
         </div>
       </div>
 
@@ -95,7 +95,11 @@
           <fieldset class="grid_2">
           <legend>{{ opts.name }}</legend>
             {% for o in opts.options %}
-              {% include "optionlist.html" %}
+            <div>
+              <input title="{{ o.requires|reqlist }}" type="checkbox" id="{{ o.filepath }}" name="{{ opts.type }}" value="{{ o.filepath }}" />
+              <label for="{{ o.filepath }}">{{ o.filepath|friendly_name }}</label>
+              <small>[<a href="{{ o.filepath|trunk_link }}">docs</a>]</small>
+            </div>
             {% endfor %}
           </fieldset>
           {% endfor %}
@@ -110,7 +114,11 @@
           <fieldset class="grid_2">
           <legend>{{ opts.name }}</legend>
             {% for o in opts.options %}
-              {% include "optionlist.html" %}
+            <div>
+              <input title="{{ o.requires|reqlist }}" type="checkbox" id="{{ o.filepath }}" name="{{ opts.type }}" value="{{ o.filepath }}" />
+              <label for="{{ o.filepath }}">{{ o.filepath|friendly_name }}</label>
+              <small>[<a href="{{ o.filepath|trunk_link }}">docs</a>]</small>
+            </div>
             {% endfor %}
           </fieldset>
           {% endfor %}

@@ -55,10 +55,13 @@ def all_popups(file_path):
 def all_filters(file_path):
   return re.match("OpenLayers/Filter/\w+\.js", file_path) > -1
 
-def filename_to_sourcefile(file_path):
-  content = open('openlayers_src/trunk/lib/' + file_path, "U").read() # TODO: Ensure end of line @ EOF?
+def filename_to_sourcefile_trunk(file_path):
+  content = open('openlayers_src/trunk/lib/' + file_path, "U").read()
   return mergejs.SourceFile(file_path, content) # TODO: Chop path?
   
+def filename_to_sourcefile_release_28(file_path):
+  content = open('openlayers_src/release-2.8/lib/' + file_path, "U").read()
+  return mergejs.SourceFile(file_path, content) # TODO: Chop path?
 
 class MainHandler(webapp.RequestHandler):
   def get(self):
@@ -67,39 +70,39 @@ class MainHandler(webapp.RequestHandler):
     trunk = mergejs.scanjs('openlayers_src/trunk/lib')
     trunk = [
         { 'type': 'layer', 'name': 'Layer Types',
-          'options': map(filename_to_sourcefile, filter(all_layers, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_layers, trunk))},
         { 'type': 'control', 'name': 'Controls',
-          'options': map(filename_to_sourcefile, filter(all_controls, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_controls, trunk))},
         { 'type': 'language', 'name': 'Languages',
-          'options': map(filename_to_sourcefile, filter(all_languages, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_languages, trunk))},
         { 'type': 'format', 'name': 'Formats',
-          'options': map(filename_to_sourcefile, filter(all_formats, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_formats, trunk))},
         { 'type': 'strategy', 'name': 'Strategies',
-          'options':  map(filename_to_sourcefile, filter(all_strategies, trunk))},
+          'options':  map(filename_to_sourcefile_trunk, filter(all_strategies, trunk))},
         { 'type': 'protocol', 'name': 'Protocols',
-          'options': map(filename_to_sourcefile, filter(all_protocols, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_protocols, trunk))},
         { 'type': 'popup', 'name': 'Popups',
-          'options': map(filename_to_sourcefile, filter(all_popups, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_popups, trunk))},
         { 'type': 'filter', 'name': 'Filters',
-          'options': map(filename_to_sourcefile, filter(all_filters, trunk))},
+          'options': map(filename_to_sourcefile_trunk, filter(all_filters, trunk))},
         ]
     release_28 = [
         { 'type': 'layer', 'name': 'Layer Types',
-          'options': map(filename_to_sourcefile, filter(all_layers, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_layers, release_28))},
         { 'type': 'control', 'name': 'Controls',
-          'options': map(filename_to_sourcefile, filter(all_controls, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_controls, release_28))},
         { 'type': 'language', 'name': 'Languages',
-          'options': map(filename_to_sourcefile, filter(all_languages, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_languages, release_28))},
         { 'type': 'format', 'name': 'Formats',
-          'options': map(filename_to_sourcefile, filter(all_formats, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_formats, release_28))},
         { 'type': 'strategy', 'name': 'Strategies',
-          'options':  map(filename_to_sourcefile, filter(all_strategies, release_28))},
+          'options':  map(filename_to_sourcefile_release_28, filter(all_strategies, release_28))},
         { 'type': 'protocol', 'name': 'Protocols',
-          'options': map(filename_to_sourcefile, filter(all_protocols, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_protocols, release_28))},
         { 'type': 'popup', 'name': 'Popups',
-          'options': map(filename_to_sourcefile, filter(all_popups, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_popups, release_28))},
         { 'type': 'filter', 'name': 'Filters',
-          'options': map(filename_to_sourcefile, filter(all_filters, release_28))},
+          'options': map(filename_to_sourcefile_release_28, filter(all_filters, release_28))},
         ]
 
     template_values = {
@@ -122,7 +125,10 @@ class OpenLayerer(webapp.RequestHandler):
 
     forceFirst = first
     include = controls + layers + languages + strategies \
-        + protocols + formats + popup + filter
+        + protocols + formats + popups + filters
+    if len(include) == 0:
+        print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"
+
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
     try:

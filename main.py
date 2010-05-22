@@ -24,12 +24,15 @@ from collections import defaultdict
 
 template.register_template_library('templatetags.options')
 
+version_dir = 'openlayers_src/OpenLayers-2.9.1/lib'
+
 first = [
   'OpenLayers/SingleFile.js',
   'OpenLayers.js',
   'OpenLayers/BaseTypes.js',
   'OpenLayers/BaseTypes/Class.js',
-  'OpenLayers/Util.js']
+  'OpenLayers/Util.js',
+  'Rico/Corner.js']
       
 def all_layers(file_path):
   return re.match("OpenLayers/Layer/\w+\.js", file_path) > -1
@@ -46,6 +49,9 @@ def all_formats(file_path):
 def all_strategies(file_path):
   return re.match("OpenLayers/Strategy/\w+\.js", file_path) > -1
 
+def all_renderers(file_path):
+  return re.match("OpenLayers/Renderer/\w+\.js", file_path) > -1
+
 def all_protocols(file_path):
   return re.match("OpenLayers/Protocol/\w+\.js", file_path) > -1
 
@@ -55,58 +61,37 @@ def all_popups(file_path):
 def all_filters(file_path):
   return re.match("OpenLayers/Filter/\w+\.js", file_path) > -1
 
-def filename_to_sourcefile_trunk(file_path):
-  content = open('openlayers_src/trunk/lib/' + file_path, "U").read()
-  return mergejs.SourceFile(file_path, content) # TODO: Chop path?
-  
-def filename_to_sourcefile_release_28(file_path):
-  content = open('openlayers_src/release-2.8/lib/' + file_path, "U").read()
+def filename_to_sourcefile_release_29(file_path):
+  content = open(os.path.join(version_dir, file_path), "U").read()
   return mergejs.SourceFile(file_path, content) # TODO: Chop path?
 
 class MainHandler(webapp.RequestHandler):
   def get(self):
     path = os.path.join(os.path.dirname(__file__), 'index.html')
-    release_28 = mergejs.scanjs('openlayers_src/release-2.8/lib')
-    trunk = mergejs.scanjs('openlayers_src/trunk/lib')
-    trunk = [
+    release_29 = mergejs.scanjs(version_dir)
+    release_29 = [
         { 'type': 'layer', 'name': 'Layer Types',
-          'options': map(filename_to_sourcefile_trunk, filter(all_layers, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_layers, release_29))},
         { 'type': 'control', 'name': 'Controls',
-          'options': map(filename_to_sourcefile_trunk, filter(all_controls, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_controls, release_29))},
         { 'type': 'language', 'name': 'Languages',
-          'options': map(filename_to_sourcefile_trunk, filter(all_languages, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_languages, release_29))},
         { 'type': 'format', 'name': 'Formats',
-          'options': map(filename_to_sourcefile_trunk, filter(all_formats, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_formats, release_29))},
         { 'type': 'strategy', 'name': 'Strategies',
-          'options':  map(filename_to_sourcefile_trunk, filter(all_strategies, trunk))},
+          'options':  map(filename_to_sourcefile_release_29, filter(all_strategies, release_29))},
         { 'type': 'protocol', 'name': 'Protocols',
-          'options': map(filename_to_sourcefile_trunk, filter(all_protocols, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_protocols, release_29))},
+        { 'type': 'renderer', 'name': 'Renderers',
+          'options': map(filename_to_sourcefile_release_29, filter(all_renderers, release_29))},
         { 'type': 'popup', 'name': 'Popups',
-          'options': map(filename_to_sourcefile_trunk, filter(all_popups, trunk))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_popups, release_29))},
         { 'type': 'filter', 'name': 'Filters',
-          'options': map(filename_to_sourcefile_trunk, filter(all_filters, trunk))},
-        ]
-    release_28 = [
-        { 'type': 'layer', 'name': 'Layer Types',
-          'options': map(filename_to_sourcefile_release_28, filter(all_layers, release_28))},
-        { 'type': 'control', 'name': 'Controls',
-          'options': map(filename_to_sourcefile_release_28, filter(all_controls, release_28))},
-        { 'type': 'language', 'name': 'Languages',
-          'options': map(filename_to_sourcefile_release_28, filter(all_languages, release_28))},
-        { 'type': 'format', 'name': 'Formats',
-          'options': map(filename_to_sourcefile_release_28, filter(all_formats, release_28))},
-        { 'type': 'strategy', 'name': 'Strategies',
-          'options':  map(filename_to_sourcefile_release_28, filter(all_strategies, release_28))},
-        { 'type': 'protocol', 'name': 'Protocols',
-          'options': map(filename_to_sourcefile_release_28, filter(all_protocols, release_28))},
-        { 'type': 'popup', 'name': 'Popups',
-          'options': map(filename_to_sourcefile_release_28, filter(all_popups, release_28))},
-        { 'type': 'filter', 'name': 'Filters',
-          'options': map(filename_to_sourcefile_release_28, filter(all_filters, release_28))},
+          'options': map(filename_to_sourcefile_release_29, filter(all_filters, release_29))},
         ]
 
     template_values = {
-        'trunk': trunk, 'release_28': release_28}
+        'release_29': release_29}
     self.response.out.write(template.render(path, template_values))
 
 class OpenLayerer(webapp.RequestHandler):
@@ -122,18 +107,20 @@ class OpenLayerer(webapp.RequestHandler):
     popups = self.request.get_all('popup')
     version = self.request.get('version')
 
-
     forceFirst = first
+
     include = controls + layers + languages + strategies \
         + protocols + formats + popups + filters
+
     if len(include) == 0:
         print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"
 
     config = mergejs.Config(include=include, forceFirst=forceFirst)
 
     try:
-        merged = mergejs.merge('openlayers_src/%s/lib' % version, config)
-    except:
+        merged = mergejs.merge(version_dir, config)
+    except Exception, e:
+        print e
         self.response.out.write("An error occurred. Currently a single layer, language, or control must be selected, OpenLayerer does not do empty builds yet.")
         return
         
@@ -148,7 +135,6 @@ def main():
   application = webapp.WSGIApplication([('/', MainHandler), ('/openlayerer', OpenLayerer)],
                                        debug=True)
   wsgiref.handlers.CGIHandler().run(application)
-
 
 if __name__ == '__main__':
   main()

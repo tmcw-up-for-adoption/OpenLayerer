@@ -1,7 +1,6 @@
 <html>
   <head>
     <title>OpenLayerer</title>
-    <link type="text/css" rel="stylesheet" media="all" href="style/grid.css" />
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(
@@ -13,7 +12,8 @@
                   dependencies = $(this).attr('title').split(',');
                   version = $( $(this).parents('.version')[0] ).attr('id');
                   for (i in dependencies) {
-                    $("#"+version+" input[value='" + dependencies[i] + "']").attr('checked', true);
+                    $("#"+version+" input[value='" + 
+                      dependencies[i] + "']").attr('checked', true);
                   }
                 }
               }
@@ -23,8 +23,8 @@
       </script>
     <style type="text/css">
       body {
-        font-family: "Arial", sans-serif;
-        font-size: 11px;
+        font-family: "Helvetica Neue", "Arial", sans-serif;
+        font-size: 12px;
         color: #333;
         background-color: #eee;
         margin: 0;
@@ -32,6 +32,10 @@
       }
       a {
         text-decoration: none;
+      }
+      em {
+        background: #fff;
+        padding: 3px;
       }
       a:hover {
         text-decoration: underline;
@@ -53,69 +57,53 @@
       }
       legend {
         font-weight: bold;
-        margin-bottom: 1em;
+        margin-bottom: 0;
+        font-size: 15px;
+        background: #fff;
       }
       .header {
         padding-bottom: 10px;
         margin-bottom: 8px;
-        border-bottom: 1px solid #aaa;
+      }
+      h1 {
+        margin-top: 8px;
       }
       h2 {
-        border-bottom: 1px solid #aaa;
         padding-bottom: 10px;
       }
       .footer {
         padding-top: 20px;
         padding-bottom: 20px;
       }
-
-      .generate_button {
-        font-size: 18px;
+      .wrapper {
+        padding: 20px;
       }
-
+      .grid_2 {
+        display: block;
+        width: 180px;
+        padding: 10px 10px 10px 0;
+        float: left;
+      }
     </style>
   </head>
   <body>
-    <div class="container_12">
-      <div class="header clearfix">
-        <div class="grid_4">
+    <div class="wrapper">
+      <div class="header">
           <h1>OpenLayerer</h1>
-        </div>
-        <div class="grid_8">
-        <p>OpenLayerer makes custom versions of <a href="http://www.openlayers.org">OpenLayers</a> which include only the parts that you want to use. You can <a href="http://github.com/tmcw/OpenLayerer/tree">fork this project on GitHub.</a></p>
-        <p>OpenLayerer 2 now includes many more options and dependency managment. It is still in beta, so please file issues on <a href="http://github.com/tmcw/OpenLayerer/issues">GitHub</a> for any bugs you find.</p>
-        </div>
+          <p>Make custom versions of <a href="http://www.openlayers.org">OpenLayers</a> which include only the parts that you want to use. Currently we're baking up OpenLayers <em>2.9.1</em>, the latest stable release.</p>
       </div>
-
       <div class="clearfix version" id="trunk">
-        <h2>Trunk</h2>
         <form action="/openlayerer" method="POST">
-          <input type="hidden" name="version" value="trunk" />
-          {% for opts in trunk %}
+          {% for opts in release_29 %}
           <fieldset class="grid_2">
-          <legend>{{ opts.name }}</legend>
+            <legend>{{ opts.name }}</legend>
             {% for o in opts.options %}
             <div>
-              <input title="{{ o.requires|reqlist }}" type="checkbox" id="{{ o.filepath }}" name="{{ opts.type }}" value="{{ o.filepath }}" />
-              <label for="{{ o.filepath }}">{{ o.filepath|friendly_name }}</label>
-              <small>[<a href="{{ o.filepath|trunk_link }}">docs</a>]</small>
-            </div>
-            {% endfor %}
-          </fieldset>
-          {% endfor %}
-          <input class="generate_button" type="submit" value="Generate OpenLayers.js" />
-        </form>
-      </div>
-      <div class="clearfix version" id="release_28">
-        <h2>Release 2.8</h2>
-        <form action="/openlayerer" method="POST">
-          <input type="hidden" name="version" value="release_28" />
-          {% for opts in release_28 %}
-          <fieldset class="grid_2">
-          <legend>{{ opts.name }}</legend>
-            {% for o in opts.options %}
-            <div>
-              <input title="{{ o.requires|reqlist }}" type="checkbox" id="{{ o.filepath }}" name="{{ opts.type }}" value="{{ o.filepath }}" />
+              <input title="{{ o.requires|reqlist }}" 
+                type="checkbox" 
+                id="{{ o.filepath }}" 
+                name="{{ opts.type }}" 
+                value="{{ o.filepath }}" />
               <label for="{{ o.filepath }}">{{ o.filepath|friendly_name }}</label>
               <small>[<a href="{{ o.filepath|trunk_link }}">docs</a>]</small>
             </div>
@@ -126,7 +114,7 @@
         </form>
       </div>
       <div class="footer" class="grid_12">
-        2009 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com
+        2010 - <a href="http://www.developmentseed.org/">Development Seed</a>. Send feedback to macwright@gmail.com
       </div>
     </div>
 </html>

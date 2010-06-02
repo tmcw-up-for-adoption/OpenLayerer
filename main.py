@@ -31,6 +31,10 @@ first = [
   'OpenLayers.js',
   'OpenLayers/BaseTypes.js',
   'OpenLayers/BaseTypes/Class.js',
+  'OpenLayers/Renderer/Canvas.js',
+  'OpenLayers/Renderer/Elements.js',
+  'OpenLayers/Renderer/SVG.js',
+  'OpenLayers/Renderer/VML.js',
   'OpenLayers/Util.js',
   'Rico/Corner.js']
       
@@ -105,12 +109,13 @@ class OpenLayerer(webapp.RequestHandler):
     protocols = self.request.get_all('protocol')
     filters = self.request.get_all('filter')
     popups = self.request.get_all('popup')
+    renderers = self.request.get_all('renderer')
     version = self.request.get('version')
 
     forceFirst = first
 
     include = controls + layers + languages + strategies \
-        + protocols + formats + popups + filters
+        + protocols + formats + popups + filters + renderers
 
     if len(include) == 0:
         print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"

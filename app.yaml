@@ -1,11 +1,14 @@
 application: openlayerer
-version: 2
+version: 3
 runtime: python
 api_version: 1
 
 handlers:
 - url: /style
   static_dir: style
+
+- url: /recipes
+  static_dir: recipes 
 
 - url: /js
   static_dir: js

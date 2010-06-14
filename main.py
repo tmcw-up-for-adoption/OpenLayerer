@@ -31,11 +31,12 @@ first = [
   'OpenLayers.js',
   'OpenLayers/BaseTypes.js',
   'OpenLayers/BaseTypes/Class.js',
+  'OpenLayers/Util.js',
+  'OpenLayers/Renderer.js',
   'OpenLayers/Renderer/Canvas.js',
   'OpenLayers/Renderer/Elements.js',
   'OpenLayers/Renderer/SVG.js',
   'OpenLayers/Renderer/VML.js',
-  'OpenLayers/Util.js',
   'Rico/Corner.js']
       
 def all_layers(file_path):
@@ -112,15 +113,13 @@ class OpenLayerer(webapp.RequestHandler):
     renderers = self.request.get_all('renderer')
     version = self.request.get('version')
 
-    forceFirst = first
-
     include = controls + layers + languages + strategies \
         + protocols + formats + popups + filters + renderers
 
     if len(include) == 0:
         print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"
 
-    config = mergejs.Config(include=include, forceFirst=forceFirst)
+    config = mergejs.Config(include=include, forceFirst=first)
 
     try:
         merged = mergejs.merge(version_dir, config)

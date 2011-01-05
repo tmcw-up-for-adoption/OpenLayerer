@@ -94,7 +94,7 @@ class MainHandler(webapp.RequestHandler):
           'options': map(filename_to_sourcefile_release_29, filter(all_popups, release_29))},
         { 'type': 'filter', 'name': 'Filters',
           'options': map(filename_to_sourcefile_release_29, filter(all_filters, release_29))},
-        { 'type': 'handlers', 'name': 'Handlers',
+        { 'type': 'handler', 'name': 'Handlers',
           'options': map(filename_to_sourcefile_release_29, filter(all_handlers, release_29))},
         ]
 

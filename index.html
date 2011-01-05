@@ -1,175 +1,228 @@
 <html>
-  <head>
+<head>
     <title>OpenLayerer</title>
     <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src='js/json2.js'></script>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <script type='text/javascript'>
-      $(document).ready(
-        function() {
-          $('input').click(
-            function () {
-              if ($(this).attr('checked') === true) {
-                if ($(this).attr('title')) {
-                  dependencies = $(this).attr('title').split(',');
-                  version = $( $(this).parents('.version')[0] ).attr('id');
-                  for (i in dependencies) {
-                    $('#'+version+' input[value='' + 
-                      dependencies[i] + '']').attr('checked', true);
-                  }
+        $(document).ready(
+                function() {
+                    $('input').click(
+                            function () {
+                                if ($(this).attr('checked') === true) {
+                                    if ($(this).attr('title')) {
+                                        dependencies = $(this).attr('title').split(',');
+                                        version = $($(this).parents('.version')[0]).attr('id');
+                                        for (i in dependencies) {
+                                            $("#" + version + " input[value='' + dependencies[i] + '']").attr('checked', true);
+                                        }
+                                    }
+                                }
+                            });
+                    $("#buttonSaveConfiguration").click(function(e) {
+                        $("#onPostBack").val("config");
+                    });
+                    $("#buttonGenerate").click(function(e) {
+                        $("#onPostBack").val("build");
+                    });
+                    $("#buttonLoadConfig").click(function(e) {
+                        e.preventDefault();
+                        if ($("#config").val() == "") {return;}
+                        var configs = "{ \"items\" : " + $("#config").val().replace(/u'/gi, "'").replace(/'/gi, "\"") + "}";
+                        var obj = JSON.parse(configs);
+                        $(":checkbox").attr("checked", null);
+                        $.each(obj.items, function(i,item){
+                            $(":checkbox[value="+item+"]").attr("checked", "checked");
+                        });
+
+                    });
+                    $("#buttonSelectAll").click(function(e) {
+                         e.preventDefault();
+                         $(":checkbox").attr("checked", "checked");
+                    });
+                     $("#buttonSelectNone").click(function(e) {
+                         e.preventDefault();
+                        $(":checkbox").attr("checked", null);
+                    });
                 }
-              }
-            });
-          }
-        );
-      </script>
+                );
+    </script>
     <style type='text/css'>
-      body {
-        font-family: 'Helvetica Neue', 'Arial', sans-serif;
-        font-size: 12px;
-        color: #333;
-        background-color: #eee;
-        margin: 0;
-        border-top: 10px solid #333;
-      }
-      a {
-        text-decoration: none;
-      }
-      em {
-        background: #fff;
-        padding: 3px;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      a:visited {
-        color: blue;
-      }
-      small,
-      small a {
-        color: #aaa;
-        font-size: 7px;
-      }
-      small a:hover {
-        color: blue;
-      }
-      fieldset {
-        padding: 0;
-        border: 0;
-      }
-      legend {
-        font-weight: bold;
-        margin-bottom: 0;
-        font-size: 15px;
-        background: #fff;
-      }
-      .header {
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-      }
-      h1 {
-        font-family: 'Lobster';
-        font-size: 90px;
-        line-height: 50px;
-        margin-top: 10px;
-      }
-      h2 {
-        padding-bottom: 10px;
-      }
-      .footer {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .wrapper {
-        padding: 20px;
-      }
-      .grid_2 {
-        display: block;
-        width: 180px;
-        padding: 10px 10px 10px 0;
-        float: left;
-      }
-
-      table#recipes {
-        border-collapse: collapse;
-        margin-bottom: 10px;
+        body {
+            font-family: 'Helvetica Neue', 'Arial', sans-serif;
+            font-size: 12px;
+            color: #333;
+            background-color: #eee;
+            margin: 0;
+            border-top: 10px solid #333;
         }
 
-      table#recipes th {
-        padding: 5px 10px;
-      }
-      table#recipes td,
-      table#recipes th {
-        border: 1px solid #aaa;
+        a {
+            text-decoration: none;
         }
 
-      table#recipes td.recipe {
-        background-color: #fff;
-        padding: 5px;
+        em {
+            background: #fff;
+            padding: 3px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        small,
+        small a {
+            color: #aaa;
+            font-size: 7px;
+        }
+
+        small a:hover {
+            color: blue;
+        }
+
+        fieldset {
+            padding: 0;
+            border: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 0;
+            font-size: 15px;
+            background: #fff;
+        }
+
+        .header {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Lobster';
+            font-size: 90px;
+            line-height: 50px;
+            margin-top: 10px;
+        }
+
+        h2 {
+            padding-bottom: 10px;
+        }
+
+        .footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .wrapper {
+            padding: 20px;
+        }
+
+        .grid_2 {
+            display: block;
+            width: 180px;
+            padding: 10px 10px 10px 0;
+            float: left;
+        }
+
+        table#recipes {
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        table#recipes th {
+            padding: 5px 10px;
+        }
+
+        table#recipes td,
+        table#recipes th {
+            border: 1px solid #aaa;
+        }
+
+        table#recipes td.recipe {
+            background-color: #fff;
+            padding: 5px;
         }
 
         td.recipe div.dl {
         }
 
         #recipes h1 {
-          font-size: 16px;
-          }
+            font-size: 16px;
+        }
 
         #recipes h2 {
-          font-size: 14px;
-          padding: 0;
-          margin: 0;
-          }
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
 
         #recipes p {
-          margin: 0;
-          font-size: 12px;
-          }
+            margin: 0;
+            font-size: 12px;
+        }
 
     </style>
-  </head>
-  <body>
-    <div class='wrapper'>
-      <div class='header'>
-          <h1>OpenLayerer</h1>
-          <p>Make custom versions of <a href='http://www.openlayers.org'>OpenLayers</a> which include only the parts that you want to use. Currently we're baking up OpenLayers <em>2.9.1</em>, the latest stable release.</p>
-      </div>
-      <table id='recipes'>
-        <tr>
-          <th>
-            Recipes
-          </th>
-          <td class='recipe'>
-            <h2>OpenStreetMap Minimal</h2>
-            <p>For when you just want OpenStreetMap.</p>
-            <div class='dl'>
-              <a href="/recipes/OpenLayers_osm.js">&#8679; 315KB</a>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <div class='clearfix version' id='trunk'>
-        <form action='/openlayerer' method='POST'>
-          {% for opts in release_29 %}
-          <fieldset class='grid_2'>
-            <legend>{{ opts.name }}</legend>
-            {% for o in opts.options %}
-            <div>
-              <input title='{{ o.requires|reqlist }}' 
-                type='checkbox' 
-                id='{{ o.filepath }}' 
-                name='{{ opts.type }}' 
-                value='{{ o.filepath }}' />
-              <label for='{{ o.filepath }}'>{{ o.filepath|friendly_name }}</label>
-              <small>[<a href='{{ o.filepath|trunk_link }}'>docs</a>]</small>
-            </div>
-            {% endfor %}
-          </fieldset>
-          {% endfor %}
-          <input class='generate_button' type='submit' value='Generate OpenLayers.js' />
-        </form>
-      </div>
-      <div class='footer' class='grid_12'>
-        [Version 3.0] 2010 - <a href='http://www.developmentseed.org/'>Development Seed</a>. Send feedback to macwright@gmail.com
-      </div>
+</head>
+<body>
+<div class='wrapper'>
+    <div class='header'>
+        <h1>OpenLayerer</h1>
+
+        <p>Make custom versions of <a href='http://www.openlayers.org'>OpenLayers</a> which include only the parts that
+            you want to use. Currently we're baking up OpenLayers <em>2.9.1</em>, the latest stable release.</p>
     </div>
+    <table id='recipes'>
+        <tr>
+            <th>
+                Recipes
+            </th>
+            <td class='recipe'>
+                <h2>OpenStreetMap Minimal</h2>
+
+                <p>For when you just want OpenStreetMap.</p>
+
+                <div class='dl'>
+                    <a href="/recipes/OpenLayers_osm.js">&#8679; 315KB</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class='clearfix version' id='trunk'>
+        <form action='/openlayerer' method='POST'> <input type="hidden" id="onPostBack" name="onPostBack"/>
+            {% for opts in release_29 %}
+            <fieldset class='grid_2'>
+                <legend>{{ opts.name }}</legend>
+                {% for o in opts.options %}
+                <div>
+                    <input title='{{ o.requires|reqlist }}'
+                           type='checkbox'
+                           id='{{ o.filepath }}'
+                           name='{{ opts.type }}'
+                           value='{{ o.filepath }}'/>
+                    <label for='{{ o.filepath }}'>{{ o.filepath|friendly_name }}</label>
+                    <small>[<a href='{{ o.filepath|trunk_link }}'>docs</a>]</small>
+                </div>
+                {% endfor %}
+            </fieldset>
+            {% endfor %}
+            <input class='generate_button' type='submit' id="buttonGenerate" value='Generate OpenLayers.js'/>
+            <input class='generate_button' id="buttonSaveConfiguration" type='submit' value='Save openlayer.conf'/>
+            <br />
+             <input class='generate_button' type='submit' id="buttonSelectAll" value='Select all'/>
+            <input class='generate_button' id="buttonSelectNone" type='submit' value='Select none'/>
+            <br/>
+            <textarea rows="4" cols="20" id="config"></textarea>
+            <input class='generate_button' id="buttonLoadConfig" type='button' value='Load configuration'/>
+        </form>
+    </div>
+    <div class='footer' class='grid_12'>
+        [Version 3.0] 2010 - <a href='http://www.developmentseed.org/'>Development Seed</a>. Send feedback to
+        macwright@gmail.com
+    </div>
+</div>
+</body>
 </html>

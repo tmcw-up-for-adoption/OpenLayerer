@@ -33,11 +33,14 @@ first = [
   'OpenLayers/BaseTypes/Class.js',
   'OpenLayers/Util.js',
   'OpenLayers/Renderer.js',
-  'OpenLayers/Renderer/Canvas.js',
-  'OpenLayers/Renderer/Elements.js',
-  'OpenLayers/Renderer/SVG.js',
-  'OpenLayers/Renderer/VML.js',
+  'OpenLayers/Handler.js',
   'Rico/Corner.js']
+  
+  #  'OpenLayers/Renderer/Canvas.js',
+  #'OpenLayers/Renderer/Elements.js',
+  #'OpenLayers/Renderer/SVG.js',
+  #'OpenLayers/Renderer/VML.js',
+#  'OpenLayers/Handler.js',
       
 def all_layers(file_path):
   return re.match("OpenLayers/Layer/\w+\.js", file_path) > -1
@@ -66,6 +69,9 @@ def all_popups(file_path):
 def all_filters(file_path):
   return re.match("OpenLayers/Filter/\w+\.js", file_path) > -1
 
+def all_handlers(file_path):
+  return re.match("OpenLayers/Handler/\w+\.js", file_path) > -1
+
 def filename_to_sourcefile_release_29(file_path):
   content = open(os.path.join(version_dir, file_path), "U").read()
   return mergejs.SourceFile(file_path, content) # TODO: Chop path?
@@ -93,6 +99,8 @@ class MainHandler(webapp.RequestHandler):
           'options': map(filename_to_sourcefile_release_29, filter(all_popups, release_29))},
         { 'type': 'filter', 'name': 'Filters',
           'options': map(filename_to_sourcefile_release_29, filter(all_filters, release_29))},
+        { 'type': 'handlers', 'name': 'Handlers',
+          'options': map(filename_to_sourcefile_release_29, filter(all_handlers, release_29))},
         ]
 
     template_values = {
@@ -109,12 +117,13 @@ class OpenLayerer(webapp.RequestHandler):
     strategies = self.request.get_all('strategy')
     protocols = self.request.get_all('protocol')
     filters = self.request.get_all('filter')
+    handlers = self.request.get_all('handler')
     popups = self.request.get_all('popup')
     renderers = self.request.get_all('renderer')
     version = self.request.get('version')
 
     include = controls + layers + languages + strategies \
-        + protocols + formats + popups + filters + renderers
+        + protocols + formats + popups + filters + renderers + handlers
 
     if len(include) == 0:
         print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"
@@ -127,12 +136,18 @@ class OpenLayerer(webapp.RequestHandler):
         print e
         self.response.out.write("An error occurred. Currently a single layer, language, or control must be selected, OpenLayerer does not do empty builds yet.")
         return
-        
-    output = file('license.txt').read() + build.minimize(merged)
+
+    if self.request.get("onPostBack") == "build" :
+        output = file('license.txt').read() + build.minimize(merged)
+    else: 
+        output = include 
 
     # Force client to download file
     self.response.headers['Content-Type'] = 'application/octet-stream'
-    self.response.headers['Content-Disposition'] = 'attachment; filename="OpenLayers.js"'
+    if self.request.get("onPostBack") == "build" :
+        self.response.headers['Content-Disposition'] = 'attachment; filename="OpenLayers.js"'
+    else:
+        self.response.headers['Content-Disposition'] = 'attachment; filename="OpenLayers.conf"'
     self.response.out.write(output)
 
 def main():

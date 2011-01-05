@@ -5,7 +5,7 @@ $(document).ready(function() {
         dependencies = $(this).attr('title').split(',');
         version = $($(this).parents('.version')[0]).attr('id');
         for (i in dependencies) {
-          $('#' + version + " input[value='' + dependencies[i] + '']").attr('checked', true);
+          $('#' + version + " input[value='" + dependencies[i] + "']").attr('checked', true);
         }
       }
     }

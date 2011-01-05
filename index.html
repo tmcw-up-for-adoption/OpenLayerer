@@ -34,24 +34,26 @@
   <div class='clearfix version' id='trunk'>
     <form action='/openlayerer' method='POST'>
       <input type="hidden" id="onPostBack" name="onPostBack"/>
-      <input type='checkbox' id='select-all-box'> Select All
-      {% for opts in release_29 %}
-      <fieldset class='grid_2'>
-        <legend>{{ opts.name }}</legend>
-        {% for o in opts.options %}
-        <div>
-          <input title='{{ o.requires|reqlist }}'
-            type='checkbox'
-            id='{{ o.filepath }}'
-            name='{{ opts.type }}'
-            class='item'
-            value='{{ o.filepath }}'/>
-          <label for='{{ o.filepath }}'>{{ o.filepath|friendly_name }}</label>
-          <a class='docs-link' title='Documentation' href='{{ o.filepath|trunk_link }}'>?</a>
-        </div>
+      <div id='select-all'><input type='checkbox' id='select-all-box'> Select All</div>
+      <div id='options-grid'>
+        {% for opts in release_29 %}
+        <fieldset class='grid_2'>
+          <legend>{{ opts.name }}</legend>
+          {% for o in opts.options %}
+          <div>
+            <input title='{{ o.requires|reqlist }}'
+              type='checkbox'
+              id='{{ o.filepath }}'
+              name='{{ opts.type }}'
+              class='item'
+              value='{{ o.filepath }}'/>
+            <label for='{{ o.filepath }}'>{{ o.filepath|friendly_name }}</label>
+            <a class='docs-link' title='Documentation' href='{{ o.filepath|trunk_link }}'>?</a>
+          </div>
+          {% endfor %}
+        </fieldset>
         {% endfor %}
-      </fieldset>
-      {% endfor %}
+      </div>
       <input class='generate_button' type='submit'
         id="buttonGenerate" value='Generate OpenLayers.js'/>
       <input class='generate_button' type='submit'

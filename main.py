@@ -15,7 +15,8 @@
 # limitations under the License.
 #
 
-import wsgiref.handlers, os, re, json
+import wsgiref.handlers, os, re
+from django.utils import simplejson as json
 from google.appengine.ext.webapp import template
 from google.appengine.ext import webapp
 

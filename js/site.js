@@ -23,6 +23,7 @@ $(document).ready(function() {
           $(':checkbox[value='+ item + ']').attr('checked', 'checked');
       });
     }
+    return false;
   });
 
   $('#select-all-box').change(function(e) {

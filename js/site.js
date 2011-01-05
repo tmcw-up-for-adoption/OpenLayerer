@@ -10,8 +10,12 @@ $(document).ready(function() {
     }
   });
 
-  $('#buttonSaveConfiguration, #buttonGenerate').click(function(e) {
+  $('#buttonSaveConfiguration').click(function(e) {
     $('#onPostBack').val('config');
+  });
+
+  $('#buttonGenerate').click(function(e) {
+    $('#onPostBack').val('build');
   });
 
   $('#load-config').click(function(e) {

@@ -3,50 +3,8 @@
     <title>OpenLayerer</title>
     <script type='text/javascript' src='js/jquery.min.js'></script>
     <script type='text/javascript' src='js/json2.js'></script>
+    <script type='text/javascript' src='js/site.js'></script>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <script type='text/javascript'>
-        $(document).ready(
-                function() {
-                    $('input').click(
-                            function () {
-                                if ($(this).attr('checked') === true) {
-                                    if ($(this).attr('title')) {
-                                        dependencies = $(this).attr('title').split(',');
-                                        version = $($(this).parents('.version')[0]).attr('id');
-                                        for (i in dependencies) {
-                                            $("#" + version + " input[value='' + dependencies[i] + '']").attr('checked', true);
-                                        }
-                                    }
-                                }
-                            });
-                    $("#buttonSaveConfiguration").click(function(e) {
-                        $("#onPostBack").val("config");
-                    });
-                    $("#buttonGenerate").click(function(e) {
-                        $("#onPostBack").val("build");
-                    });
-                    $("#buttonLoadConfig").click(function(e) {
-                        e.preventDefault();
-                        if ($("#config").val() == "") {return;}
-                        var configs = "{ \"items\" : " + $("#config").val().replace(/u'/gi, "'").replace(/'/gi, "\"") + "}";
-                        var obj = JSON.parse(configs);
-                        $(":checkbox").attr("checked", null);
-                        $.each(obj.items, function(i,item){
-                            $(":checkbox[value="+item+"]").attr("checked", "checked");
-                        });
-
-                    });
-                    $("#buttonSelectAll").click(function(e) {
-                         e.preventDefault();
-                         $(":checkbox").attr("checked", "checked");
-                    });
-                     $("#buttonSelectNone").click(function(e) {
-                         e.preventDefault();
-                        $(":checkbox").attr("checked", null);
-                    });
-                }
-                );
-    </script>
     <style type='text/css'>
         body {
             font-family: 'Helvetica Neue', 'Arial', sans-serif;

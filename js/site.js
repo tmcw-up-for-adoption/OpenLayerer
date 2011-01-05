@@ -14,9 +14,8 @@ $(document).ready(function() {
     $('#onPostBack').val('config');
   });
 
-  $('#buttonLoadConfig').click(function(e) {
+  $('#load-config').click(function(e) {
     var obj;
-    e.preventDefault();
     if ($('#config').val() !== '') {
       obj = $.parseJSON($('#config').val());
       $(':checkbox').attr('checked', null);
@@ -26,13 +25,9 @@ $(document).ready(function() {
     }
   });
 
-  $('#buttonSelectAll').click(function(e) {
-     e.preventDefault();
-     $(':checkbox').attr('checked', 'checked');
-  });
-
-  $('#buttonSelectNone').click(function(e) {
-    e.preventDefault();
-    $(':checkbox').attr('checked', null);
+  $('#select-all-box').change(function(e) {
+    $('.item:checkbox').attr(
+      'checked',
+      $(e.currentTarget).attr('checked') ? 'checked' : false);
   });
 });

@@ -12,8 +12,10 @@
   <div class='header'>
     <h1>OpenLayerer</h1>
 
-    <p>Make custom versions of <a href='http://www.openlayers.org'>OpenLayers</a> which include only the parts that
-        you want to use. Currently we're baking up OpenLayers <em>2.9.1</em>, the latest stable release.</p>
+    <p>Make custom versions of <a href='http://www.openlayers.org'>OpenLayers</a>
+    which include only the parts that
+    you want to use. Currently we're baking up OpenLayers
+    <em>2.9.1</em>, the latest stable release.</p>
   </div>
   <table id='recipes'>
     <tr>
@@ -30,7 +32,9 @@
     </tr>
   </table>
   <div class='clearfix version' id='trunk'>
-    <form action='/openlayerer' method='POST'> <input type="hidden" id="onPostBack" name="onPostBack"/>
+    <form action='/openlayerer' method='POST'>
+      <input type="hidden" id="onPostBack" name="onPostBack"/>
+      <input type='checkbox' id='select-all-box'> Select All
       {% for opts in release_29 %}
       <fieldset class='grid_2'>
         <legend>{{ opts.name }}</legend>
@@ -40,6 +44,7 @@
             type='checkbox'
             id='{{ o.filepath }}'
             name='{{ opts.type }}'
+            class='item'
             value='{{ o.filepath }}'/>
           <label for='{{ o.filepath }}'>{{ o.filepath|friendly_name }}</label>
           <a class='docs-link' title='Documentation' href='{{ o.filepath|trunk_link }}'>?</a>
@@ -47,19 +52,22 @@
         {% endfor %}
       </fieldset>
       {% endfor %}
-      <input class='generate_button' type='submit' id="buttonGenerate" value='Generate OpenLayers.js'/>
-      <input class='generate_button' id="buttonSaveConfiguration" type='submit' value='Save openlayer.conf'/>
+      <input class='generate_button' type='submit'
+        id="buttonGenerate" value='Generate OpenLayers.js'/>
+      <input class='generate_button' type='submit'
+        id="buttonSaveConfiguration" value='Save Openlayers.conf'/>
       <br />
-       <input class='generate_button' type='submit' id="buttonSelectAll" value='Select all'/>
-      <input class='generate_button' id="buttonSelectNone" type='submit' value='Select none'/>
-      <br/>
-      <textarea rows="4" cols="20" id="config"></textarea>
-      <input class='generate_button' id="buttonLoadConfig" type='button' value='Load configuration'/>
+      <br />
+      <textarea rows='4' cols='20' id='config'></textarea>
+      <button class='generate_button'
+          id='load-config'>Load Configuration</button>
     </form>
   </div>
   <div class='footer' class='grid_12'>
-      [Version 3.0] 2010 - <a href='http://www.developmentseed.org/'>Development Seed</a>. Send feedback to
-      macwright@gmail.com | <a href='http://www.padovaboy.it/Blog/LastPosts.aspx'>Tweaks from PadovaBoy</a>
+      [Version 3.0] 2010 - <a href='http://www.developmentseed.org/'>
+          Development Seed</a>. Send feedback to
+      macwright@gmail.com | 
+      <a href='http://www.padovaboy.it/Blog/LastPosts.aspx'>Tweaks from PadovaBoy</a>
   </div>
 </div>
 </body>

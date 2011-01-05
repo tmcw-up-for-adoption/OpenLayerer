@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-import wsgiref.handlers, os, re
+import wsgiref.handlers, os, re, json
 from google.appengine.ext.webapp import template
 from google.appengine.ext import webapp
 
@@ -35,13 +35,7 @@ first = [
   'OpenLayers/Renderer.js',
   'OpenLayers/Handler.js',
   'Rico/Corner.js']
-  
-  #  'OpenLayers/Renderer/Canvas.js',
-  #'OpenLayers/Renderer/Elements.js',
-  #'OpenLayers/Renderer/SVG.js',
-  #'OpenLayers/Renderer/VML.js',
-#  'OpenLayers/Handler.js',
-      
+
 def all_layers(file_path):
   return re.match("OpenLayers/Layer/\w+\.js", file_path) > -1
 
@@ -134,13 +128,14 @@ class OpenLayerer(webapp.RequestHandler):
         merged = mergejs.merge(version_dir, config)
     except Exception, e:
         print e
-        self.response.out.write("An error occurred. Currently a single layer, language, or control must be selected, OpenLayerer does not do empty builds yet.")
+        self.response.out.write("An error occurred. Currently a single layer, \
+            language, or control must be selected, OpenLayerer does not do empty builds yet.")
         return
 
     if self.request.get("onPostBack") == "build" :
         output = file('license.txt').read() + build.minimize(merged)
     else: 
-        output = include 
+        output = json.dumps({ "items": include })
 
     # Force client to download file
     self.response.headers['Content-Type'] = 'application/octet-stream'

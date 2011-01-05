@@ -1,12 +1,11 @@
 $(document).ready(function() {
   $('input').click(function() {
-    if ($(this).attr('checked') === true) {
-      if ($(this).attr('title')) {
-        dependencies = $(this).attr('title').split(',');
-        version = $($(this).parents('.version')[0]).attr('id');
-        for (i in dependencies) {
-          $('#' + version + " input[value='" + dependencies[i] + "']").attr('checked', true);
-        }
+    var dependencies, version;
+    if ($(this).attr('checked') === true && $(this).attr('title')) {
+      dependencies = $(this).attr('title').split(',');
+      version = $($(this).parents('.version')[0]).attr('id');
+      for (i = 0, l = dependencies.length; i < l; i++) {
+        $('#' + version + " input[value='" + dependencies[i] + "']").attr('checked', true);
       }
     }
   });
@@ -16,11 +15,10 @@ $(document).ready(function() {
   });
 
   $('#buttonLoadConfig').click(function(e) {
+    var obj;
     e.preventDefault();
     if ($('#config').val() !== '') {
-      // TODO: replace with simple object-creation
-      var configs = '{ \"items\" : ' + $('#config').val().replace(/u'/gi, "'").replace(/'/gi, '\"') + '}';
-      var obj = $.parseJSON(configs);
+      obj = $.parseJSON($('#config').val());
       $(':checkbox').attr('checked', null);
       $.each(obj.items, function(i,item) {
           $(':checkbox[value='+ item + ']').attr('checked', 'checked');

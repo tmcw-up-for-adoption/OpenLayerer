@@ -55,6 +55,9 @@ def all_strategies(file_path):
 def all_renderers(file_path):
   return re.match("OpenLayers/Renderer/\w+\.js", file_path) > -1
 
+def all_geometry(file_path):
+  return re.match("OpenLayers/Geometry/\w+\.js", file_path) > -1
+
 def all_protocols(file_path):
   return re.match("OpenLayers/Protocol/\w+\.js", file_path) > -1
 
@@ -88,6 +91,8 @@ class MainHandler(webapp.RequestHandler):
           'options':  map(filename_to_sourcefile_release_29, filter(all_strategies, release_29))},
         { 'type': 'protocol', 'name': 'Protocols',
           'options': map(filename_to_sourcefile_release_29, filter(all_protocols, release_29))},
+        { 'type': 'geometry', 'name': 'Geometries',
+          'options': map(filename_to_sourcefile_release_29, filter(all_geometry, release_29))},
         { 'type': 'renderer', 'name': 'Renderers',
           'options': map(filename_to_sourcefile_release_29, filter(all_renderers, release_29))},
         { 'type': 'popup', 'name': 'Popups',
@@ -112,13 +117,15 @@ class OpenLayerer(webapp.RequestHandler):
     strategies = self.request.get_all('strategy')
     protocols = self.request.get_all('protocol')
     filters = self.request.get_all('filter')
+    geometry = self.request.get_all('geometry')
     handlers = self.request.get_all('handler')
     popups = self.request.get_all('popup')
     renderers = self.request.get_all('renderer')
     version = self.request.get('version')
 
     include = controls + layers + languages + strategies \
-        + protocols + formats + popups + filters + renderers + handlers
+        + protocols + formats + popups + filters + renderers + handlers \
+        + geometry
 
     if len(include) == 0:
         print "You didn't choose any of the things you need to build OpenLayers. Come on, choose something!"
